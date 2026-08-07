@@ -1,0 +1,6 @@
+[
+  {
+    "id": "lab-sandbox",
+    "manifest": "./sandbox/manifest.json"
+  }
+]

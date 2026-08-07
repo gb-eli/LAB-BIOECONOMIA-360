@@ -1,0 +1,6 @@
+[
+  {
+    "id": "tool-gestao-financeira",
+    "manifest": "./gestao-financeira/manifest.json"
+  }
+]

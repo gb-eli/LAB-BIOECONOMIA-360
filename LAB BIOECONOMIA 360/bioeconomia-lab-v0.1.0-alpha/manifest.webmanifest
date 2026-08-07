@@ -1,0 +1,9 @@
+{
+  "name": "Bioeconomia Lab",
+  "short_name": "BioLab",
+  "start_url": "./#/inicio",
+  "display": "standalone",
+  "background_color": "#091412",
+  "theme_color": "#091412",
+  "description": "Plataforma modular do Curso Técnico em Bioeconomia."
+}

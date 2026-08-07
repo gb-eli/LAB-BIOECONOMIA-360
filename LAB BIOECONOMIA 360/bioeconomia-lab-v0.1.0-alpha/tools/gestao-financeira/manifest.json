@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "tool-gestao-financeira",
+  "name": "Gestão Financeira",
+  "version": "0.1.0",
+  "type": "tool",
+  "description": "Ferramenta didática inicial para receita, custos, resultado e margem.",
+  "entry": "./tool.js",
+  "style": "./tool.css",
+  "route": "/tool/gestao-financeira",
+  "enabled": true,
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Gestão e empreendedorismo"
+    ]
+  }
+}

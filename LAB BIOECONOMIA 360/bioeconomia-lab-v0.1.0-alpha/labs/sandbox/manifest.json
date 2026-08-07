@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-sandbox",
+  "name": "Sandbox Gráfico",
+  "version": "0.1.0",
+  "type": "lab",
+  "description": "Laboratório técnico para validar ciclo de vida, render loop, resize e descarte.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/sandbox",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "graphics",
+    "performance"
+  ],
+  "curriculum": {
+    "series": [],
+    "units": [
+      "Infraestrutura técnica da plataforma"
+    ]
+  }
+}

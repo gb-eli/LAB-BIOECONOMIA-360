@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#091412" />
+  <meta name="description" content="Bioeconomia Lab — plataforma modular de aprendizagem do Curso Técnico em Bioeconomia." />
+  <title>Bioeconomia Lab</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/tokens.css" />
+  <link rel="stylesheet" href="./css/app.css" />
+  <link rel="stylesheet" href="./css/components.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+</head>
+<body>
+  <div id="app-shell" class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#/inicio" aria-label="Bioeconomia Lab — início">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span><strong>Bioeconomia Lab</strong><small>v0.1.0-alpha</small></span>
+      </a>
+      <div class="topbar-actions">
+        <button id="btn-theme" class="icon-button" type="button" title="Alternar tema">◐</button>
+        <button id="btn-menu" class="icon-button mobile-only" type="button" aria-label="Abrir menu">☰</button>
+      </div>
+    </header>
+    <aside id="app-sidebar" class="sidebar" aria-label="Navegação principal">
+      <nav id="main-nav" class="nav-list"></nav>
+      <div class="sidebar-footer">
+        <span id="status-dot" class="status-dot"></span>
+        <span id="app-status">Inicializando...</span>
+      </div>
+    </aside>
+    <main id="app-view" class="app-view" tabindex="-1">
+      <section class="boot-screen">
+        <div class="loader-ring" aria-hidden="true"></div>
+        <h1>Bioeconomia Lab</h1>
+        <p>Carregando núcleo modular...</p>
+      </section>
+    </main>
+    <div id="app-overlay" class="app-overlay" aria-live="polite"></div>
+  </div>
+  <script type="module" src="./js/bootstrap.js"></script>
+</body>
+</html>

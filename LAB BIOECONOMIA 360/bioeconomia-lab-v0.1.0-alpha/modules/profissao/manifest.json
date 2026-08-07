@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "module-profissao",
+  "name": "Profissão e Áreas de Atuação",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Perfil profissional e áreas abrangidas pelo Técnico em Bioeconomia.",
+  "entry": "./module.js",
+  "route": "/module/profissao",
+  "enabled": true,
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Formação profissional"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "module-fundamentos",
+    "manifest": "./fundamentos/manifest.json"
+  },
+  {
+    "id": "module-profissao",
+    "manifest": "./profissao/manifest.json"
+  }
+]
