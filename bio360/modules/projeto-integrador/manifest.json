@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "module-projeto-integrador",
+  "name": "Projeto Integrador de Bioeconomia",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "Projeto cumulativo para integrar território, produção, processamento, circularidade, turismo e viabilidade.",
+  "entry": "./module.js",
+  "style": "./module.css",
+  "route": "/module/projeto-integrador",
+  "enabled": true,
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Gestão e empreendedorismo",
+      "Sustentabilidade",
+      "Cadeias produtivas e agroindústria",
+      "Soluções sustentáveis",
+      "Gestão da atividade turística",
+      "Roteirização turística",
+      "Técnicas de produção animal e vegetal",
+      "Tecnologias sociais e identidade territorial",
+      "Liderança e associativismo",
+      "Marketing aplicado ao consumo sustentável"
+    ]
+  }
+}
