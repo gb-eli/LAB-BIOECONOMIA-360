@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "scenes": [
+    {
+      "id": "territory",
+      "name": "Território Bioeconômico 360",
+      "assetId": "shared-panorama-territory",
+      "route3d": "/lab/territorio-bioeconomico",
+      "initialView": {
+        "yaw": 8,
+        "pitch": -2,
+        "fov": 72
+      },
+      "description": "Observe produção, comunidade, agroindústria, mercado, turismo e circularidade no mesmo território.",
+      "hotspots": [
+        {
+          "id": "campo",
+          "label": "Produção vegetal",
+          "yaw": -66,
+          "pitch": -8,
+          "kind": "info",
+          "title": "Área produtiva",
+          "description": "Observe uso da terra, água, manejo e conexão com a cadeia produtiva.",
+          "route": "/lab/producao-vegetal",
+          "icon": "🌱",
+          "category": "Produção",
+          "badge": "Manejo e recursos",
+          "facts": [
+            "observe",
+            "uso",
+            "da"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/territory-campo.jpg"
+        },
+        {
+          "id": "comunidade",
+          "label": "Comunidade",
+          "yaw": -20,
+          "pitch": -5,
+          "kind": "info",
+          "title": "Comunidade e território",
+          "description": "Tecnologias sociais, associativismo e identidade territorial aparecem como parte da bioeconomia.",
+          "route": "/lab/associativismo-cooperativismo",
+          "icon": "🤝",
+          "category": "Território",
+          "badge": "Governança local",
+          "facts": [
+            "tecnologias",
+            "sociais",
+            "associativismo"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/territory-comunidade.jpg"
+        },
+        {
+          "id": "agro",
+          "label": "Agroindústria",
+          "yaw": 30,
+          "pitch": -4,
+          "kind": "portal",
+          "title": "Agroindústria",
+          "description": "A matéria-prima pode seguir para transformação, conservação, embalagem e agregação de valor.",
+          "route": "/lab/agroindustria",
+          "icon": "🏭",
+          "category": "Agroindústria",
+          "badge": "Transformação",
+          "facts": [
+            "a",
+            "matéria-prima",
+            "pode"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/territory-agro.jpg"
+        },
+        {
+          "id": "mercado",
+          "label": "Mercado local",
+          "yaw": 93,
+          "pitch": -5,
+          "kind": "info",
+          "title": "Mercado e consumo",
+          "description": "A viabilidade depende de público, posicionamento, confiança e preço.",
+          "route": "/lab/marketing-consumo-sustentavel",
+          "icon": "🛍️",
+          "category": "Mercado",
+          "badge": "Consumo sustentável",
+          "facts": [
+            "a",
+            "viabilidade",
+            "depende"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/territory-mercado.jpg"
+        },
+        {
+          "id": "residuos",
+          "label": "Circularidade",
+          "yaw": 137,
+          "pitch": -6,
+          "kind": "info",
+          "title": "Resíduos e subprodutos",
+          "description": "Fluxos residuais podem retornar ao sistema por compostagem, reciclagem, biodigestão ou outras estratégias.",
+          "route": "/lab/economia-circular",
+          "icon": "♻️",
+          "category": "Circularidade",
+          "badge": "Retorno de materiais",
+          "facts": [
+            "fluxos",
+            "residuais",
+            "podem"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/territory-residuos.jpg"
+        },
+        {
+          "id": "turismo",
+          "label": "Turismo territorial",
+          "yaw": 174,
+          "pitch": -4,
+          "kind": "info",
+          "title": "Experiência turística",
+          "description": "Paisagem, produção e cultura podem compor experiências sustentáveis quando a capacidade e os benefícios locais são planejados.",
+          "route": "/lab/turismo-sustentavel",
+          "icon": "🧭",
+          "category": "Turismo",
+          "badge": "Experiência territorial",
+          "facts": [
+            "paisagem",
+            "produção",
+            "e"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/territory-turismo.jpg"
+        }
+      ],
+      "audioAssetId": "shared-audio-territory"
+    },
+    {
+      "id": "agroindustry",
+      "name": "Agroindústria 360",
+      "assetId": "shared-panorama-agroindustry",
+      "route3d": "/lab/agroindustria",
+      "initialView": {
+        "yaw": 5,
+        "pitch": 0,
+        "fov": 70
+      },
+      "description": "Explore o fluxo industrial em panorama 360 e abra cada etapa no laboratório 3D.",
+      "hotspots": [
+        {
+          "id": "recepcao",
+          "label": "Recepção",
+          "yaw": -151,
+          "pitch": -4,
+          "kind": "info",
+          "title": "Recepção da matéria-prima",
+          "description": "Conferência, identificação e controle inicial do lote.",
+          "icon": "📦",
+          "category": "Fluxo industrial",
+          "badge": "Etapa 1",
+          "facts": [
+            "conferência",
+            "identificação",
+            "e"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/agroindustry-recepcao.jpg"
+        },
+        {
+          "id": "higiene",
+          "label": "Higienização",
+          "yaw": -100,
+          "pitch": -4,
+          "kind": "info",
+          "title": "Higienização",
+          "description": "Limpeza e sanitização antes do processamento.",
+          "icon": "🫧",
+          "category": "Fluxo industrial",
+          "badge": "Etapa 2",
+          "facts": [
+            "limpeza",
+            "e",
+            "sanitização"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/agroindustry-higiene.jpg"
+        },
+        {
+          "id": "processo",
+          "label": "Processamento",
+          "yaw": -43,
+          "pitch": -3,
+          "kind": "info",
+          "title": "Processamento",
+          "description": "Transformação controlada e acompanhamento de parâmetros.",
+          "icon": "⚙️",
+          "category": "Fluxo industrial",
+          "badge": "Etapa 3",
+          "facts": [
+            "transformação",
+            "controlada",
+            "e"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/agroindustry-processo.jpg"
+        },
+        {
+          "id": "conservacao",
+          "label": "Conservação",
+          "yaw": 18,
+          "pitch": -3,
+          "kind": "info",
+          "title": "Conservação",
+          "description": "Calor, frio, secagem, fermentação ou métodos combinados.",
+          "icon": "🌡️",
+          "category": "Fluxo industrial",
+          "badge": "Etapa 4",
+          "facts": [
+            "calor",
+            "frio",
+            "secagem"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/agroindustry-conservacao.jpg"
+        },
+        {
+          "id": "embalagem",
+          "label": "Embalagem",
+          "yaw": 76,
+          "pitch": -4,
+          "kind": "info",
+          "title": "Embalagem e rotulagem",
+          "description": "Proteção, comunicação e preparação comercial do produto.",
+          "icon": "🏷️",
+          "category": "Fluxo industrial",
+          "badge": "Etapa 5",
+          "facts": [
+            "proteção",
+            "comunicação",
+            "e"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/agroindustry-embalagem.jpg"
+        },
+        {
+          "id": "armazenamento",
+          "label": "Armazenamento",
+          "yaw": 130,
+          "pitch": -4,
+          "kind": "info",
+          "title": "Armazenamento",
+          "description": "Condições adequadas reduzem perdas e preservam qualidade.",
+          "icon": "🧊",
+          "category": "Fluxo industrial",
+          "badge": "Etapa 6",
+          "facts": [
+            "condições",
+            "adequadas",
+            "reduzem"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/agroindustry-armazenamento.jpg"
+        },
+        {
+          "id": "residuos",
+          "label": "Resíduos",
+          "yaw": 169,
+          "pitch": -4,
+          "kind": "portal",
+          "title": "Resíduos e subprodutos",
+          "description": "A planta também deve planejar destinação e aproveitamento de resíduos.",
+          "route": "/lab/economia-circular",
+          "icon": "♻️",
+          "category": "Circularidade",
+          "badge": "Retorno de materiais",
+          "facts": [
+            "a",
+            "planta",
+            "também"
+          ],
+          "thumbnail": "./assets/shared/hotspot-thumbs/agroindustry-residuos.jpg"
+        }
+      ],
+      "audioAssetId": "shared-audio-agroindustry"
+    }
+  ]
+}

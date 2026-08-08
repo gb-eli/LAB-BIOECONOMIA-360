@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 2,
+  "moduleId": "lab-economia-circular",
+  "scenarios": [
+    {
+      "id": "feira-local",
+      "title": "Feira e comércio local",
+      "level": "iniciante",
+      "context": "Uma feira produz resíduos orgânicos, papelão e embalagens plásticas todas as semanas.",
+      "objective": "Reduzir a destinação final e aumentar o aproveitamento dos materiais.",
+      "inputs": {
+        "organic": 70,
+        "recyclable": 45,
+        "water": 35,
+        "strategy": "compostagem"
+      },
+      "goals": {
+        "circularity": {
+          "min": 68,
+          "label": "Circularidade"
+        },
+        "environment": {
+          "min": 66,
+          "label": "Desempenho ambiental"
+        },
+        "economicPotential": {
+          "min": 48,
+          "label": "Potencial econômico"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Por que a estratégia escolhida é adequada para os resíduos deste cenário?"
+        }
+      ]
+    },
+    {
+      "id": "agroindustria-residuos",
+      "title": "Resíduos da agroindústria",
+      "level": "intermediario",
+      "context": "Uma pequena agroindústria gera matéria orgânica, embalagens e efluentes do processamento.",
+      "objective": "Combinar tratamento e aproveitamento para reduzir perdas e recuperar valor.",
+      "inputs": {
+        "organic": 82,
+        "recyclable": 55,
+        "water": 68,
+        "strategy": "biodigestor"
+      },
+      "goals": {
+        "circularity": {
+          "min": 75,
+          "label": "Circularidade"
+        },
+        "environment": {
+          "min": 68,
+          "label": "Desempenho ambiental"
+        },
+        "economicPotential": {
+          "min": 58,
+          "label": "Potencial econômico"
+        }
+      },
+      "limits": {
+        "water": {
+          "source": "input",
+          "max": 80,
+          "label": "Pressão hídrica"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como o reaproveitamento de resíduos pode se conectar à cadeia produtiva da agroindústria?"
+        }
+      ]
+    },
+    {
+      "id": "territorio-integrado",
+      "title": "Simbiose territorial",
+      "level": "desafio",
+      "context": "Produtores, comércio e uma agroindústria do mesmo território querem compartilhar soluções para resíduos.",
+      "objective": "Criar uma rota com alto aproveitamento, baixa pressão ambiental e possibilidade de geração de valor.",
+      "inputs": {
+        "organic": 78,
+        "recyclable": 72,
+        "water": 50,
+        "strategy": "integrada"
+      },
+      "goals": {
+        "circularity": {
+          "min": 85,
+          "label": "Circularidade"
+        },
+        "environment": {
+          "min": 78,
+          "label": "Desempenho ambiental"
+        },
+        "economicPotential": {
+          "min": 68,
+          "label": "Potencial econômico"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Que relações entre diferentes atores tornam uma solução territorial mais circular do que uma ação isolada?"
+        }
+      ]
+    }
+  ]
+}

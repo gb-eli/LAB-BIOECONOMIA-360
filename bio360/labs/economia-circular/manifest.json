@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-economia-circular",
+  "name": "Economia Circular 3D",
+  "version": "0.8.0",
+  "type": "lab",
+  "description": "Economia Circular 3D G6 com Quality Governor coordenando sombras, vegetação e partículas adaptativas, além de biomassa/biogás/efluentes.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/economia-circular",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "adaptive-particle-budget",
+    "adaptive-shadows",
+    "branch-metrics",
+    "curriculum",
+    "effluent-particles",
+    "evidence",
+    "fallback-2d",
+    "g5-vegetation",
+    "ibl-local",
+    "performance-output",
+    "runtime-quality-governor",
+    "scenario-v2",
+    "scenarios",
+    "simulation",
+    "solid-biomass",
+    "staged-effluent-treatment"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Soluções sustentáveis",
+      "Sustentabilidade",
+      "Tecnologias sociais e identidade territorial",
+      "Cadeias produtivas e agroindústria"
+    ],
+    "knowledge": [
+      "Economia circular",
+      "Resíduos",
+      "Compostagem",
+      "Biodigestão",
+      "Reciclagem",
+      "Logística reversa",
+      "Simbiose industrial"
+    ]
+  },
+  "experienceClass": "simulacao-3d"
+}

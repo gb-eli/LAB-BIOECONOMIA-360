@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-cadeia-produtiva",
+  "name": "Cadeia Produtiva Integrada 3D",
+  "version": "0.4.0",
+  "type": "lab",
+  "description": "Cadeia Produtiva Integrada 3D G6 com núcleo central, beacons instanciados, LOD, regiões de sombra, Quality Governor, IBL e jornada persistente.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/cadeia-produtiva",
+  "enabled": true,
+  "capabilities": [
+    "3d",
+    "adaptive-shadows",
+    "assets-gltf",
+    "curriculum",
+    "dynamic-station-lod",
+    "fallback-2d",
+    "g4-assets",
+    "g6-chain-hub",
+    "ibl-local",
+    "instanced-chain-beacons",
+    "integrated-journey",
+    "lab-context",
+    "runtime-quality-governor",
+    "scene-complexity-budget",
+    "shadow-regions",
+    "simulation"
+  ],
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Cadeias produtivas e agroindústria",
+      "Soluções sustentáveis",
+      "Marketing aplicado ao consumo sustentável",
+      "Gestão e empreendedorismo"
+    ],
+    "knowledge": [
+      "Cadeia de valor",
+      "Valor agregado",
+      "Logística",
+      "Resíduos e subprodutos",
+      "Consumo sustentável"
+    ]
+  },
+  "graphicMode": "adaptive",
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "experienceClass": "simulacao-3d"
+}

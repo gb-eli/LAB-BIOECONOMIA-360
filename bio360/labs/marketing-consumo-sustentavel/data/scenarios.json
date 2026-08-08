@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 2,
+  "moduleId": "lab-marketing-consumo-sustentavel",
+  "scenarios": [
+    {
+      "id": "feira-local",
+      "title": "Produto em feira local",
+      "level": "iniciante",
+      "context": "Um produto regional será apresentado diretamente ao consumidor em uma feira.",
+      "objective": "Construir uma comunicação clara, confiável e coerente com a origem local.",
+      "inputs": {
+        "pricePosition": 95,
+        "packaging": 68,
+        "storytelling": 72,
+        "digital": 42,
+        "proof": 58,
+        "audience": "consumidor-local",
+        "positioning": "origem-local"
+      },
+      "goals": {
+        "appeal": {
+          "min": 68,
+          "label": "Atratividade"
+        },
+        "trust": {
+          "min": 64,
+          "label": "Confiança"
+        },
+        "sustainableConsumption": {
+          "min": 62,
+          "label": "Consumo sustentável"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como sua comunicação mostra valor sem transformar sustentabilidade em apenas uma promessa publicitária?"
+        }
+      ]
+    },
+    {
+      "id": "marca-sustentavel",
+      "title": "Marca sustentável de maior valor agregado",
+      "level": "intermediario",
+      "context": "O produto pretende atingir consumidores dispostos a pagar mais quando existe origem, qualidade e evidência de sustentabilidade.",
+      "objective": "Equilibrar preço, credibilidade, embalagem e diferenciação.",
+      "inputs": {
+        "pricePosition": 118,
+        "packaging": 86,
+        "storytelling": 78,
+        "digital": 72,
+        "proof": 82,
+        "audience": "consumidor-consciente",
+        "positioning": "premium-sustentavel"
+      },
+      "goals": {
+        "appeal": {
+          "min": 72,
+          "label": "Atratividade"
+        },
+        "trust": {
+          "min": 78,
+          "label": "Confiança"
+        },
+        "marketFit": {
+          "min": 68,
+          "label": "Adequação ao mercado"
+        },
+        "sustainableConsumption": {
+          "min": 78,
+          "label": "Consumo sustentável"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Que elementos justificam um preço superior sem cair em greenwashing?"
+        }
+      ]
+    },
+    {
+      "id": "produto-turistico",
+      "title": "Produto territorial ligado ao turismo",
+      "level": "desafio",
+      "context": "Um produto local será vendido como parte de uma experiência turística e precisa representar o território.",
+      "objective": "Integrar narrativa territorial, embalagem, origem e estratégia de divulgação.",
+      "inputs": {
+        "pricePosition": 108,
+        "packaging": 82,
+        "storytelling": 92,
+        "digital": 78,
+        "proof": 72,
+        "audience": "visitante",
+        "positioning": "experiencia-territorial"
+      },
+      "goals": {
+        "appeal": {
+          "min": 80,
+          "label": "Atratividade"
+        },
+        "trust": {
+          "min": 72,
+          "label": "Confiança"
+        },
+        "marketFit": {
+          "min": 74,
+          "label": "Adequação ao mercado"
+        },
+        "sustainableConsumption": {
+          "min": 76,
+          "label": "Consumo sustentável"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como o produto comunica o território sem reduzir cultura e comunidade a um elemento decorativo?"
+        }
+      ]
+    }
+  ]
+}

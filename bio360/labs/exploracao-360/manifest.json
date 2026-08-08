@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-exploracao-360",
+  "name": "Exploração Bioeconomia 360",
+  "version": "0.9.0",
+  "type": "lab",
+  "description": "Panorama 360 ilustrado em tela ampla com hotspots, transição 3D, giroscópio, áudio e modo Cinema com panorâmica automática.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/exploracao-360",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "360",
+    "3d-to-360-handoff",
+    "3d-transition",
+    "ambient-audio",
+    "assets-local",
+    "cardboard-stereo",
+    "crossfade-360-3d",
+    "curriculum",
+    "fallback-2d",
+    "gyro-screen-orientation",
+    "gyroscope",
+    "hotspot-thumbnails",
+    "hotspots",
+    "panorama",
+    "quality-adaptive",
+    "rich-hotspots",
+    "webxr-progressive-enhancement"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Tecnologias sociais e identidade territorial",
+      "Sustentabilidade",
+      "Cadeias produtivas e agroindústria",
+      "Gestão da atividade turística"
+    ],
+    "knowledge": [
+      "Leitura territorial",
+      "Cadeia produtiva",
+      "Agroindústria",
+      "Circularidade",
+      "Observação profissional"
+    ]
+  },
+  "experienceClass": "panorama-360-ilustrado",
+  "graphicsGeneration": "G8"
+}

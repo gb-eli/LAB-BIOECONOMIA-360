@@ -1,0 +1,12 @@
+[data-module="lab-cadeia-produtiva"] .route-step{
+  width:100%;
+  color:var(--text);
+  text-decoration:none;
+  text-align:left;
+}
+[data-module="lab-cadeia-produtiva"] .route-step small{
+  display:block;
+  color:var(--muted);
+  margin-top:3px;
+  line-height:1.4;
+}

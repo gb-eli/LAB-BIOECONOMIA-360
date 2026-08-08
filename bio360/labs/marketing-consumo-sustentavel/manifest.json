@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-marketing-consumo-sustentavel",
+  "name": "Marketing e Consumo Sustentável 3D",
+  "version": "0.5.0",
+  "type": "lab",
+  "description": "Marketing e Consumo Sustentável 3D G6 com LOD de quiosque/expositor, embalagens instanciadas, IBL, regiões de sombra e Quality Governor.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/marketing-consumo-sustentavel",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "assets-gltf",
+    "curriculum",
+    "dynamic-market-lod",
+    "evidence",
+    "fallback-2d",
+    "g4-assets",
+    "ibl-local",
+    "instanced-packages",
+    "lab-context",
+    "runtime-quality-governor",
+    "scenario-v2",
+    "scenarios",
+    "shadow-regions",
+    "simulation"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Marketing aplicado ao consumo sustentável",
+      "Gestão e empreendedorismo",
+      "Gestão da atividade turística"
+    ],
+    "knowledge": [
+      "Público-alvo",
+      "Segmentação",
+      "Posicionamento",
+      "Branding",
+      "Storytelling",
+      "Consumo sustentável",
+      "Embalagem",
+      "Marketing digital"
+    ]
+  },
+  "experienceClass": "simulacao-3d"
+}
