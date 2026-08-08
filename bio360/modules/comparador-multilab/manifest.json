@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "module-comparador-multilab",
+  "name": "Comparador MultiLab",
+  "version": "0.4.0",
+  "type": "module",
+  "description": "Comparador MultiLab V3 com decisões de eventos, branches exclusivas, correções e indicadores financeiros lado a lado.",
+  "entry": "./module.js",
+  "style": "./module.css",
+  "route": "/module/comparador-multilab",
+  "enabled": true
+}

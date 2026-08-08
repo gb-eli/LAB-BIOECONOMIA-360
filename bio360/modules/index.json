@@ -1,0 +1,46 @@
+[
+  {
+    "id": "module-fundamentos",
+    "manifest": "./fundamentos/manifest.json"
+  },
+  {
+    "id": "module-profissao",
+    "manifest": "./profissao/manifest.json"
+  },
+  {
+    "id": "module-painel-curricular",
+    "manifest": "./painel-curricular/manifest.json"
+  },
+  {
+    "id": "module-projeto-integrador",
+    "manifest": "./projeto-integrador/manifest.json"
+  },
+  {
+    "id": "module-portfolio",
+    "manifest": "./portfolio/manifest.json"
+  },
+  {
+    "id": "module-missao-multilab",
+    "manifest": "./missao-multilab/manifest.json"
+  },
+  {
+    "id": "module-mapa-multilab",
+    "manifest": "./mapa-multilab/manifest.json"
+  },
+  {
+    "id": "module-relatorio-multilab",
+    "manifest": "./relatorio-multilab/manifest.json"
+  },
+  {
+    "id": "module-historico-multilab",
+    "manifest": "./historico-multilab/manifest.json"
+  },
+  {
+    "id": "module-comparador-multilab",
+    "manifest": "./comparador-multilab/manifest.json"
+  },
+  {
+    "id": "module-diagnostico-grafico",
+    "manifest": "./diagnostico-grafico/manifest.json"
+  }
+]

@@ -1,0 +1,21 @@
+[data-module="module-comparador-multilab"] .compare-selectors{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;
+}
+[data-module="module-comparador-multilab"] .compare-sides{
+  display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;
+}
+[data-module="module-comparador-multilab"] .compare-side{border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--surface)}
+[data-module="module-comparador-multilab"] .compare-row{
+  display:grid;grid-template-columns:minmax(150px,1.2fr) .6fr .6fr .6fr;gap:8px;align-items:center;padding:9px;border-bottom:1px solid var(--line);
+}
+[data-module="module-comparador-multilab"] .compare-bar{height:9px;border-radius:999px;background:var(--surface-3);overflow:hidden}
+[data-module="module-comparador-multilab"] .compare-bar span{display:block;height:100%;background:var(--accent);border-radius:inherit}
+[data-module="module-comparador-multilab"] .delta-positive{color:var(--accent)}
+[data-module="module-comparador-multilab"] .compare-insights{display:grid;gap:7px}
+@media(max-width:780px){
+  [data-module="module-comparador-multilab"] .compare-selectors,
+  [data-module="module-comparador-multilab"] .compare-sides{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  [data-module="module-comparador-multilab"] .compare-row{grid-template-columns:1fr 1fr}
+}
