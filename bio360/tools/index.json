@@ -1,0 +1,10 @@
+[
+  {
+    "id": "tool-gestao-financeira",
+    "manifest": "./gestao-financeira/manifest.json"
+  },
+  {
+    "id": "tool-precificacao-posicionamento",
+    "manifest": "./precificacao-posicionamento/manifest.json"
+  }
+]

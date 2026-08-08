@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "module-relatorio-multilab",
+  "name": "Relatório Final MultiLab",
+  "version": "0.4.0",
+  "type": "module",
+  "description": "Relatório MultiLab com Timeline V2, evento disparado/resolvido, consequências, correções e proveniência das branches.",
+  "entry": "./module.js",
+  "style": "./module.css",
+  "route": "/module/relatorio-multilab",
+  "enabled": true
+}

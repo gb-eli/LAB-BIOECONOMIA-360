@@ -1,0 +1,28 @@
+[data-module="module-relatorio-multilab"] .report-summary{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;
+}
+[data-module="module-relatorio-multilab"] .timeline-list{
+  position:relative;
+  margin-left:16px;
+  padding-left:22px;
+  border-left:2px solid var(--line);
+}
+[data-module="module-relatorio-multilab"] .timeline-entry{
+  position:relative;
+  padding:0 0 16px;
+}
+[data-module="module-relatorio-multilab"] .timeline-entry::before{
+  content:"";
+  position:absolute;
+  left:-29px;top:5px;
+  width:12px;height:12px;border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 4px var(--surface);
+}
+[data-module="module-relatorio-multilab"] .timeline-entry.branch::before{background:#67a8ff;}
+[data-module="module-relatorio-multilab"] .timeline-entry.event::before{background:#e6b151;}
+[data-module="module-relatorio-multilab"] .timeline-entry.outcome::before{width:16px;height:16px;left:-31px;}
+[data-module="module-relatorio-multilab"] .report-recommendations{display:grid;gap:8px;}
+@media(max-width:680px){
+  [data-module="module-relatorio-multilab"] .report-summary{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
