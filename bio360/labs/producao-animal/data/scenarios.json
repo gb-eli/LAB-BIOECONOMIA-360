@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 2,
+  "moduleId": "lab-producao-animal",
+  "scenarios": [
+    {
+      "id": "pequena-propriedade",
+      "title": "Pequena propriedade",
+      "level": "iniciante",
+      "objective": "Manter bem-estar e eficiência com poucos animais e recursos limitados.",
+      "context": "Uma pequena propriedade busca organizar melhor água, alimentação e resíduos.",
+      "inputs": {
+        "stocking": 40,
+        "feed": 68,
+        "water": 72,
+        "waste": 75,
+        "wasteRoute": "compostagem",
+        "species": "bovinos"
+      },
+      "goals": {
+        "welfare": {
+          "min": 72,
+          "label": "Bem-estar"
+        },
+        "resourceEfficiency": {
+          "min": 66,
+          "label": "Eficiência"
+        },
+        "wasteManagement": {
+          "min": 68,
+          "label": "Resíduos"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Quais ajustes foram mais importantes para equilibrar bem-estar, recursos e resíduos?"
+        }
+      ]
+    },
+    {
+      "id": "expansao-producao",
+      "title": "Expansão da produção",
+      "level": "intermediario",
+      "objective": "Aumentar o número de animais sem perder controle sobre água, alimentação e resíduos.",
+      "context": "A propriedade pretende aumentar o plantel e precisa rever infraestrutura e manejo.",
+      "inputs": {
+        "stocking": 78,
+        "feed": 76,
+        "water": 82,
+        "waste": 52,
+        "wasteRoute": "armazenamento",
+        "species": "bovinos"
+      },
+      "goals": {
+        "welfare": {
+          "min": 64,
+          "label": "Bem-estar"
+        },
+        "resourceEfficiency": {
+          "min": 62,
+          "label": "Eficiência"
+        },
+        "wasteManagement": {
+          "min": 58,
+          "label": "Resíduos"
+        }
+      },
+      "limits": {
+        "stocking": {
+          "source": "input",
+          "max": 82,
+          "label": "Densidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Que compensações foram necessárias ao aumentar a densidade animal?"
+        }
+      ]
+    },
+    {
+      "id": "sistema-circular",
+      "title": "Sistema circular",
+      "level": "desafio",
+      "objective": "Priorizar manejo de resíduos e integração com compostagem ou biodigestão.",
+      "context": "A propriedade quer transformar resíduos em recurso e reduzir perdas.",
+      "inputs": {
+        "stocking": 58,
+        "feed": 70,
+        "water": 68,
+        "waste": 92,
+        "wasteRoute": "biodigestor",
+        "species": "bovinos"
+      },
+      "goals": {
+        "welfare": {
+          "min": 70,
+          "label": "Bem-estar"
+        },
+        "resourceEfficiency": {
+          "min": 72,
+          "label": "Eficiência"
+        },
+        "wasteManagement": {
+          "min": 84,
+          "label": "Circularidade de resíduos"
+        }
+      },
+      "limits": {
+        "stocking": {
+          "source": "input",
+          "max": 68,
+          "label": "Densidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Por que a rota escolhida para os resíduos melhora ou piora a circularidade do sistema?"
+        }
+      ]
+    }
+  ]
+}

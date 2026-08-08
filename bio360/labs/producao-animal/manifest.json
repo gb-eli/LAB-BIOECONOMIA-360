@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-producao-animal",
+  "name": "Produção Animal Sustentável 3D",
+  "version": "0.15.0",
+  "type": "lab",
+  "description": "Experiência 3D G13 com feedback espacial de ventilação, água, efluentes e alimentação.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/producao-animal",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "adaptive-shadows",
+    "animated-water",
+    "consequence-reactive-water",
+    "curriculum",
+    "dynamic-species-lod",
+    "evidence",
+    "fallback-2d",
+    "g5-vegetation",
+    "ibl-local",
+    "lab-context",
+    "runtime-quality-governor",
+    "scenario-v2",
+    "scenarios",
+    "simulation",
+    "species-installations",
+    "species-models"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2"
+    ],
+    "units": [
+      "Técnicas de produção animal e vegetal",
+      "Sustentabilidade",
+      "Soluções sustentáveis"
+    ],
+    "knowledge": [
+      "Produção animal",
+      "Manejo",
+      "Bem-estar",
+      "Água",
+      "Resíduos orgânicos",
+      "Biodigestão"
+    ]
+  },
+  "experienceClass": "experiencia-3d",
+  "graphicsGeneration": "G13"
+}
