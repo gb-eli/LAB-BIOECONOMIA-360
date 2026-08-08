@@ -1,0 +1,665 @@
+{
+  "schemaVersion": 1,
+  "assets": [
+    {
+      "id": "shared-bio-crate",
+      "type": "model",
+      "format": "glb",
+      "path": "./models/bio-crate.glb",
+      "license": "Projeto próprio",
+      "purpose": "Validar carregamento GLB e cache do Asset Manager",
+      "quality": "shared-low",
+      "variants": {
+        "eco": "./models/bio-crate-eco.glb",
+        "balanced": "./models/bio-crate.glb",
+        "high": "./models/bio-crate-high.glb",
+        "ultra": "./models/bio-crate-high.glb"
+      }
+    },
+    {
+      "id": "shared-industrial-tank",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/industrial-tank-eco.glb",
+        "balanced": "./models/industrial-tank-eco.glb",
+        "high": "./models/industrial-tank-high.glb",
+        "ultra": "./models/industrial-tank-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Tanque industrial compartilhado G3/G4"
+    },
+    {
+      "id": "shared-market-kiosk",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/market-kiosk-eco.glb",
+        "balanced": "./models/market-kiosk-eco.glb",
+        "high": "./models/market-kiosk-high.glb",
+        "ultra": "./models/market-kiosk-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Quiosque de mercado territorial G3/G4"
+    },
+    {
+      "id": "shared-cooperative-table",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/cooperative-table-eco.glb",
+        "balanced": "./models/cooperative-table-eco.glb",
+        "high": "./models/cooperative-table-high.glb",
+        "ultra": "./models/cooperative-table-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Mesa e assentos para simulações de governança e cooperativismo"
+    },
+    {
+      "id": "shared-product-display",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/product-display-eco.glb",
+        "balanced": "./models/product-display-eco.glb",
+        "high": "./models/product-display-high.glb",
+        "ultra": "./models/product-display-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Expositor de produtos para marketing e consumo sustentável"
+    },
+    {
+      "id": "shared-product-package",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/product-package-eco.glb",
+        "balanced": "./models/product-package-eco.glb",
+        "high": "./models/product-package-high.glb",
+        "ultra": "./models/product-package-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Embalagem genérica para produto bioeconômico G4"
+    },
+    {
+      "id": "shared-chain-station",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/chain-station-eco.glb",
+        "balanced": "./models/chain-station-eco.glb",
+        "high": "./models/chain-station-high.glb",
+        "ultra": "./models/chain-station-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marco visual para etapas da cadeia integrada"
+    },
+    {
+      "id": "shared-product-identity-token",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/product-identity-token-eco.glb",
+        "balanced": "./models/product-identity-token-eco.glb",
+        "high": "./models/product-identity-token-high.glb",
+        "ultra": "./models/product-identity-token-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marcador de identidade persistente do produto na jornada MultiLab"
+    },
+    {
+      "id": "shared-mission-beacon",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/mission-beacon-eco.glb",
+        "balanced": "./models/mission-beacon-eco.glb",
+        "high": "./models/mission-beacon-high.glb",
+        "ultra": "./models/mission-beacon-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marco de missão e etapa ativa para experiências integradas"
+    },
+    {
+      "id": "shared-event-marker",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/event-marker-eco.glb",
+        "balanced": "./models/event-marker-eco.glb",
+        "high": "./models/event-marker-high.glb",
+        "ultra": "./models/event-marker-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marcador visual de evento MultiLab"
+    },
+    {
+      "id": "shared-decision-node",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/decision-node-eco.glb",
+        "balanced": "./models/decision-node-eco.glb",
+        "high": "./models/decision-node-high.glb",
+        "ultra": "./models/decision-node-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marcador visual de decisão e ramificação"
+    },
+    {
+      "id": "shared-branch-gate",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/branch-gate-eco.glb",
+        "balanced": "./models/branch-gate-eco.glb",
+        "high": "./models/branch-gate-high.glb",
+        "ultra": "./models/branch-gate-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marco visual de bifurcação MultiLab"
+    },
+    {
+      "id": "shared-sustainable-module",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/sustainable-module-eco.glb",
+        "balanced": "./models/sustainable-module-eco.glb",
+        "high": "./models/sustainable-module-high.glb",
+        "ultra": "./models/sustainable-module-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Conjunto visual para soluções sustentáveis"
+    },
+    {
+      "id": "shared-performance-gauge",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/performance-gauge-eco.glb",
+        "balanced": "./models/performance-gauge-eco.glb",
+        "high": "./models/performance-gauge-high.glb",
+        "ultra": "./models/performance-gauge-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Indicador 3D de desempenho MultiLab"
+    },
+    {
+      "id": "shared-outcome-medal",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/outcome-medal-eco.glb",
+        "balanced": "./models/outcome-medal-eco.glb",
+        "high": "./models/outcome-medal-high.glb",
+        "ultra": "./models/outcome-medal-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marcador 3D de desfecho de missão"
+    },
+    {
+      "id": "shared-timeline-node",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/timeline-node-eco.glb",
+        "balanced": "./models/timeline-node-eco.glb",
+        "high": "./models/timeline-node-high.glb",
+        "ultra": "./models/timeline-node-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Marcador visual para linha do tempo da missão"
+    },
+    {
+      "id": "shared-report-terminal",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/report-terminal-eco.glb",
+        "balanced": "./models/report-terminal-eco.glb",
+        "high": "./models/report-terminal-high.glb",
+        "ultra": "./models/report-terminal-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Terminal visual para relatório final MultiLab"
+    },
+    {
+      "id": "shared-resume-terminal",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/resume-terminal-eco.glb",
+        "balanced": "./models/resume-terminal-eco.glb",
+        "high": "./models/resume-terminal-high.glb",
+        "ultra": "./models/resume-terminal-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Terminal visual para retomada de sessões"
+    },
+    {
+      "id": "shared-compare-board",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/compare-board-eco.glb",
+        "balanced": "./models/compare-board-eco.glb",
+        "high": "./models/compare-board-high.glb",
+        "ultra": "./models/compare-board-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Painel visual para comparação de estratégias"
+    },
+    {
+      "id": "shared-panorama-territory",
+      "type": "panorama",
+      "format": "jpg",
+      "variants": {
+        "eco": "./panoramas/territory-360-eco.jpg",
+        "balanced": "./panoramas/territory-360-eco.jpg",
+        "high": "./panoramas/territory-360-high.jpg",
+        "ultra": "./panoramas/territory-360-high.jpg"
+      },
+      "license": "Projeto próprio — panorama procedural educacional",
+      "purpose": "Panorama equiretangular local do Território Bioeconômico"
+    },
+    {
+      "id": "shared-panorama-agroindustry",
+      "type": "panorama",
+      "format": "jpg",
+      "variants": {
+        "eco": "./panoramas/agroindustry-360-eco.jpg",
+        "balanced": "./panoramas/agroindustry-360-eco.jpg",
+        "high": "./panoramas/agroindustry-360-high.jpg",
+        "ultra": "./panoramas/agroindustry-360-high.jpg"
+      },
+      "license": "Projeto próprio — panorama procedural educacional",
+      "purpose": "Panorama equiretangular local da Agroindústria Virtual"
+    },
+    {
+      "id": "shared-panorama-portal",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/panorama-portal-eco.glb",
+        "balanced": "./models/panorama-portal-eco.glb",
+        "high": "./models/panorama-portal-high.glb",
+        "ultra": "./models/panorama-portal-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Portal visual de transição entre panorama 360 e laboratório 3D"
+    },
+    {
+      "id": "shared-info-pedestal",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/info-pedestal-eco.glb",
+        "balanced": "./models/info-pedestal-eco.glb",
+        "high": "./models/info-pedestal-high.glb",
+        "ultra": "./models/info-pedestal-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Pedestal visual para informações e hotspots técnicos"
+    },
+    {
+      "id": "pbr-soil-basecolor",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./pbr/soil/basecolor.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Solo PBR base color"
+    },
+    {
+      "id": "pbr-soil-normal",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/soil/normal.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Solo PBR normal"
+    },
+    {
+      "id": "pbr-soil-roughness",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/soil/roughness.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Solo PBR roughness"
+    },
+    {
+      "id": "pbr-concrete-basecolor",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./pbr/concrete/basecolor.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Concreto PBR base color"
+    },
+    {
+      "id": "pbr-concrete-normal",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/concrete/normal.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Concreto PBR normal"
+    },
+    {
+      "id": "pbr-concrete-roughness",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/concrete/roughness.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Concreto PBR roughness"
+    },
+    {
+      "id": "pbr-metal-basecolor",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./pbr/metal/basecolor.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Metal PBR base color"
+    },
+    {
+      "id": "pbr-metal-normal",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/metal/normal.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Metal PBR normal"
+    },
+    {
+      "id": "pbr-metal-roughness",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/metal/roughness.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio — textura procedural local",
+      "purpose": "Metal PBR roughness"
+    },
+    {
+      "id": "shared-audio-territory",
+      "type": "audio",
+      "format": "mp3",
+      "path": "./audio/territory-ambient.mp3",
+      "license": "Projeto próprio — áudio sintetizado local",
+      "purpose": "Ambiente sonoro do território"
+    },
+    {
+      "id": "shared-audio-agroindustry",
+      "type": "audio",
+      "format": "mp3",
+      "path": "./audio/agroindustry-ambient.mp3",
+      "license": "Projeto próprio — áudio sintetizado local",
+      "purpose": "Ambiente sonoro da agroindústria"
+    },
+    {
+      "id": "shared-wash-tunnel",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/wash-tunnel-eco.glb",
+        "balanced": "./models/wash-tunnel-eco.glb",
+        "high": "./models/wash-tunnel-high.glb",
+        "ultra": "./models/wash-tunnel-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Linha de higienização agroindustrial G5"
+    },
+    {
+      "id": "shared-pasteurizer",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/pasteurizer-eco.glb",
+        "balanced": "./models/pasteurizer-eco.glb",
+        "high": "./models/pasteurizer-high.glb",
+        "ultra": "./models/pasteurizer-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Pasteurizador/tanque de processo agroindustrial G5"
+    },
+    {
+      "id": "shared-filling-line",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/filling-line-eco.glb",
+        "balanced": "./models/filling-line-eco.glb",
+        "high": "./models/filling-line-high.glb",
+        "ultra": "./models/filling-line-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Linha de envase e embalagem agroindustrial G5"
+    },
+    {
+      "id": "shared-cold-storage",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/cold-storage-eco.glb",
+        "balanced": "./models/cold-storage-eco.glb",
+        "high": "./models/cold-storage-high.glb",
+        "ultra": "./models/cold-storage-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Câmara de armazenamento refrigerado G5"
+    },
+    {
+      "id": "shared-ibl-outdoor",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./ibl/outdoor-ibl.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 2,
+      "license": "Projeto próprio — iluminação ambiental procedural local",
+      "purpose": "Mapa equiretangular local para IBL exterior"
+    },
+    {
+      "id": "shared-ibl-industrial",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./ibl/industrial-ibl.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 2,
+      "license": "Projeto próprio — iluminação ambiental procedural local",
+      "purpose": "Mapa equiretangular local para IBL industrial"
+    },
+    {
+      "id": "pbr-wood-basecolor",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./pbr/wood/basecolor.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "wood PBR basecolor"
+    },
+    {
+      "id": "pbr-wood-normal",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/wood/normal.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "wood PBR normal"
+    },
+    {
+      "id": "pbr-wood-roughness",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/wood/roughness.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "wood PBR roughness"
+    },
+    {
+      "id": "pbr-vegetation-basecolor",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./pbr/vegetation/basecolor.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "vegetation PBR basecolor"
+    },
+    {
+      "id": "pbr-vegetation-normal",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/vegetation/normal.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "vegetation PBR normal"
+    },
+    {
+      "id": "pbr-vegetation-roughness",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/vegetation/roughness.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "vegetation PBR roughness"
+    },
+    {
+      "id": "pbr-water-basecolor",
+      "type": "texture",
+      "format": "jpg",
+      "path": "./pbr/water/basecolor.jpg",
+      "colorSpace": "srgb",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "water PBR basecolor"
+    },
+    {
+      "id": "pbr-water-normal",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/water/normal.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "water PBR normal"
+    },
+    {
+      "id": "pbr-water-roughness",
+      "type": "texture",
+      "format": "png",
+      "path": "./pbr/water/roughness.png",
+      "colorSpace": "data",
+      "anisotropy": 4,
+      "license": "Projeto próprio",
+      "purpose": "water PBR roughness"
+    },
+    {
+      "id": "shared-cow",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/cow-eco.glb",
+        "balanced": "./models/cow-eco.glb",
+        "high": "./models/cow-high.glb",
+        "ultra": "./models/cow-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Bovino G5"
+    },
+    {
+      "id": "shared-chicken",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/chicken-eco.glb",
+        "balanced": "./models/chicken-eco.glb",
+        "high": "./models/chicken-high.glb",
+        "ultra": "./models/chicken-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Ave G5"
+    },
+    {
+      "id": "shared-fish",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/fish-eco.glb",
+        "balanced": "./models/fish-eco.glb",
+        "high": "./models/fish-high.glb",
+        "ultra": "./models/fish-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Peixe G5"
+    },
+    {
+      "id": "shared-animal-shelter",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/animal-shelter-eco.glb",
+        "balanced": "./models/animal-shelter-eco.glb",
+        "high": "./models/animal-shelter-high.glb",
+        "ultra": "./models/animal-shelter-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Abrigo animal G5"
+    },
+    {
+      "id": "shared-effluent-treatment",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/effluent-treatment-eco.glb",
+        "balanced": "./models/effluent-treatment-eco.glb",
+        "high": "./models/effluent-treatment-high.glb",
+        "ultra": "./models/effluent-treatment-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Tratamento de efluentes G5"
+    },
+    {
+      "id": "shared-tourism-gateway",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/tourism-gateway-eco.glb",
+        "balanced": "./models/tourism-gateway-eco.glb",
+        "high": "./models/tourism-gateway-high.glb",
+        "ultra": "./models/tourism-gateway-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Portal visual G6 para entrada/identidade de roteiro turístico"
+    },
+    {
+      "id": "shared-chain-hub",
+      "type": "model",
+      "format": "glb",
+      "variants": {
+        "eco": "./models/chain-hub-eco.glb",
+        "balanced": "./models/chain-hub-eco.glb",
+        "high": "./models/chain-hub-high.glb",
+        "ultra": "./models/chain-hub-high.glb"
+      },
+      "license": "Projeto próprio",
+      "purpose": "Núcleo visual G6 para a Cadeia Produtiva Integrada"
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 2,
+  "rules": [
+    {
+      "id": "branch-seca-solucao",
+      "label": "Resposta hídrica obrigatória",
+      "reason": "A decisão de manter o plano durante a seca exige uma etapa corretiva antes de continuar.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "when": {
+        "all": [
+          {
+            "type": "eventChoice",
+            "eventId": "seca-territorial",
+            "choiceId": "manter-plano"
+          }
+        ]
+      },
+      "action": {
+        "type": "addStage",
+        "afterStageId": "territory",
+        "stage": {
+          "id": "sustainable-response",
+          "title": "Plano de Solução Sustentável",
+          "route": "/lab/solucoes-sustentaveis",
+          "transferTypes": [
+            "sustainable-solution-plan"
+          ],
+          "instruction": "A seca foi mantida sem adaptação inicial. Construa agora um plano corretivo de água, energia e eficiência."
+        }
+      },
+      "priority": 75
+    },
+    {
+      "id": "branch-governanca-reparacao",
+      "label": "Reparação de governança",
+      "reason": "A centralização adotada no conflito criou risco de legitimidade e exige uma nova rodada de governança.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado"
+      ],
+      "when": {
+        "all": [
+          {
+            "type": "eventChoice",
+            "eventId": "conflito-governanca",
+            "choiceId": "centralizar-decisao"
+          }
+        ]
+      },
+      "action": {
+        "type": "addStage",
+        "afterStageId": "governance",
+        "stage": {
+          "id": "governance-recovery",
+          "title": "Plano corretivo de governança",
+          "route": "/lab/associativismo-cooperativismo",
+          "transferTypes": [
+            "governance-remediation"
+          ],
+          "instruction": "Retorne à governança, aumente participação/transparência e envie um plano corretivo."
+        }
+      },
+      "priority": 75
+    },
+    {
+      "id": "branch-qualidade-reprocesso",
+      "label": "Recuperação de qualidade",
+      "reason": "A venda sem ajuste transferiu risco ao mercado; a missão exige uma ação corretiva na Agroindústria.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "when": {
+        "all": [
+          {
+            "type": "eventChoice",
+            "eventId": "variacao-lote",
+            "choiceId": "vender-sem-ajuste"
+          }
+        ]
+      },
+      "action": {
+        "type": "addStage",
+        "afterStageId": "processing",
+        "stage": {
+          "id": "quality-recovery",
+          "title": "Recuperar padrão de qualidade",
+          "route": "/lab/agroindustria",
+          "transferTypes": [
+            "quality-remediation"
+          ],
+          "instruction": "Retorne à Agroindústria e registre uma ação corretiva de qualidade antes de avançar."
+        }
+      },
+      "priority": 75
+    },
+    {
+      "id": "branch-turismo-obrigatorio",
+      "label": "Turismo tornou-se canal estratégico",
+      "reason": "Ao escolher parceria com turismo, a etapa turística deixa de ser opcional.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado"
+      ],
+      "when": {
+        "all": [
+          {
+            "type": "eventChoice",
+            "eventId": "oscilacao-demanda",
+            "choiceId": "parceria-turismo"
+          }
+        ]
+      },
+      "action": {
+        "type": "makeRequired",
+        "stageId": "tourism"
+      },
+      "priority": 55
+    },
+    {
+      "id": "branch-rastreabilidade-premium",
+      "label": "Rota premium desbloqueada",
+      "reason": "A implantação de rastreabilidade permite explorar uma comunicação premium baseada em evidências.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "when": {
+        "all": [
+          {
+            "type": "eventChoice",
+            "eventId": "exigencia-rastreabilidade",
+            "choiceId": "implantar-rastreabilidade"
+          }
+        ]
+      },
+      "action": {
+        "type": "addOptionalStage",
+        "afterStageId": "marketing",
+        "stage": {
+          "id": "premium-positioning",
+          "title": "Posicionamento premium rastreável",
+          "route": "/lab/marketing-consumo-sustentavel",
+          "transferTypes": [
+            "premium-market-route"
+          ],
+          "instruction": "Etapa bônus: transforme rastreabilidade em posicionamento premium sem greenwashing."
+        }
+      },
+      "priority": 45
+    },
+    {
+      "id": "perf-governanca-baixa",
+      "label": "Reforço de governança por desempenho",
+      "reason": "Os indicadores de governança ou equidade ficaram abaixo do patamar mínimo da missão.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado"
+      ],
+      "sticky": true,
+      "when": {
+        "any": [
+          {
+            "type": "transferMetric",
+            "transferType": "governance-model",
+            "path": "payload.governance",
+            "operator": "<",
+            "value": 65
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "governance-model",
+            "path": "payload.fairness",
+            "operator": "<",
+            "value": 60
+          }
+        ]
+      },
+      "action": {
+        "type": "addStage",
+        "afterStageId": "governance",
+        "stage": {
+          "id": "governance-recovery",
+          "title": "Reforçar governança e participação",
+          "route": "/lab/associativismo-cooperativismo",
+          "transferTypes": [
+            "governance-remediation"
+          ],
+          "instruction": "Os indicadores ficaram baixos. Ajuste participação e transparência e registre um plano corretivo."
+        }
+      },
+      "priority": 65
+    },
+    {
+      "id": "perf-governanca-robusta-dispensa",
+      "label": "Governança robusta reduz retrabalho",
+      "reason": "Mesmo após a decisão controversa, os indicadores estruturais permaneceram excepcionalmente altos; a reparação formal é dispensada.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado"
+      ],
+      "sticky": true,
+      "when": {
+        "all": [
+          {
+            "type": "eventChoice",
+            "eventId": "conflito-governanca",
+            "choiceId": "centralizar-decisao"
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "governance-model",
+            "path": "payload.governance",
+            "operator": ">=",
+            "value": 88
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "governance-model",
+            "path": "payload.fairness",
+            "operator": ">=",
+            "value": 82
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "governance-model",
+            "path": "payload.transparency",
+            "operator": ">=",
+            "value": 85
+          }
+        ]
+      },
+      "action": {
+        "type": "waiveStage",
+        "stageId": "governance-recovery"
+      },
+      "priority": 100
+    },
+    {
+      "id": "perf-solucao-insuficiente",
+      "label": "Revisão do plano sustentável",
+      "reason": "A primeira solução sustentável não atingiu resiliência ou viabilidade suficientes.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "sticky": true,
+      "when": {
+        "any": [
+          {
+            "type": "transferMetric",
+            "transferType": "sustainable-solution-plan",
+            "path": "payload.resilience",
+            "operator": "<",
+            "value": 70
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "sustainable-solution-plan",
+            "path": "payload.feasibility",
+            "operator": "<",
+            "value": 55
+          }
+        ]
+      },
+      "action": {
+        "type": "addStage",
+        "afterStageId": "sustainable-response",
+        "stage": {
+          "id": "solution-revision",
+          "title": "Revisar solução sustentável",
+          "route": "/lab/solucoes-sustentaveis",
+          "transferTypes": [
+            "sustainable-solution-revision"
+          ],
+          "instruction": "A primeira solução ficou frágil. Melhore resiliência e viabilidade e registre uma revisão."
+        }
+      },
+      "priority": 70
+    },
+    {
+      "id": "perf-marketing-fragil",
+      "label": "Revisão obrigatória de mercado",
+      "reason": "Confiança ou adequação ao mercado ficaram abaixo do nível mínimo para seguir à precificação.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "sticky": true,
+      "when": {
+        "any": [
+          {
+            "type": "transferMetric",
+            "transferType": "market-strategy",
+            "path": "payload.trust",
+            "operator": "<",
+            "value": 60
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "market-strategy",
+            "path": "payload.marketFit",
+            "operator": "<",
+            "value": 58
+          }
+        ]
+      },
+      "action": {
+        "type": "addStage",
+        "afterStageId": "marketing",
+        "stage": {
+          "id": "market-review",
+          "title": "Revisar estratégia de mercado",
+          "route": "/lab/marketing-consumo-sustentavel",
+          "transferTypes": [
+            "market-strategy-revision"
+          ],
+          "instruction": "Reforce credibilidade, posicionamento e adequação antes de seguir."
+        }
+      },
+      "priority": 70
+    },
+    {
+      "id": "perf-circularidade-premium",
+      "label": "Oportunidade premium circular",
+      "reason": "Circularidade e desempenho ambiental elevados desbloquearam uma rota bônus de mercado.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "sticky": true,
+      "when": {
+        "all": [
+          {
+            "type": "transferMetric",
+            "transferType": "circularity-performance",
+            "path": "payload.circularity",
+            "operator": ">=",
+            "value": 82
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "circularity-performance",
+            "path": "payload.environment",
+            "operator": ">=",
+            "value": 76
+          }
+        ]
+      },
+      "action": {
+        "type": "addOptionalStage",
+        "afterStageId": "circularity",
+        "stage": {
+          "id": "circular-premium-market",
+          "title": "Explorar valor premium da circularidade",
+          "route": "/lab/marketing-consumo-sustentavel",
+          "transferTypes": [
+            "circular-premium-route"
+          ],
+          "instruction": "Etapa bônus: transforme desempenho circular comprovado em proposta de valor sem exagerar alegações."
+        }
+      },
+      "priority": 40
+    },
+    {
+      "id": "perf-financeiro-fragil",
+      "label": "Recuperação financeira obrigatória",
+      "reason": "O resultado financeiro ou a margem ficaram abaixo do patamar mínimo.",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "sticky": true,
+      "when": {
+        "any": [
+          {
+            "type": "transferMetric",
+            "transferType": "financial-result",
+            "path": "payload.resultado",
+            "operator": "<",
+            "value": 0
+          },
+          {
+            "type": "transferMetric",
+            "transferType": "financial-result",
+            "path": "payload.margem",
+            "operator": "<",
+            "value": 8
+          }
+        ]
+      },
+      "action": {
+        "type": "addStage",
+        "afterStageId": "finance",
+        "stage": {
+          "id": "financial-recovery",
+          "title": "Reestruturar viabilidade financeira",
+          "route": "/tool/gestao-financeira",
+          "transferTypes": [
+            "financial-remediation"
+          ],
+          "instruction": "Ajuste preço, volume ou estrutura de custos até recuperar resultado não negativo e margem mínima."
+        }
+      },
+      "priority": 65
+    }
+  ],
+  "version": "2.1.0"
+}

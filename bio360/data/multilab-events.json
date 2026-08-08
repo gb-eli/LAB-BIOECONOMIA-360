@@ -1,0 +1,523 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "id": "seca-territorial",
+      "title": "Período de seca reduz a disponibilidade de água",
+      "category": "clima",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "trigger": {
+        "afterStage": "territory"
+      },
+      "description": "A disponibilidade hídrica ficou abaixo do esperado. A decisão tomada agora afetará a produção e poderá gerar custos adicionais.",
+      "baseEffects": [
+        {
+          "key": "production.waterAccess",
+          "operation": "add",
+          "value": -18,
+          "target": "production",
+          "label": "Disponibilidade de água -18"
+        }
+      ],
+      "choices": [
+        {
+          "id": "adaptar-irrigacao",
+          "label": "Investir em irrigação eficiente",
+          "description": "Recupera parte da disponibilidade, mas aumenta custos fixos.",
+          "outcome": "A produção ganha resiliência hídrica, com investimento adicional.",
+          "effects": [
+            {
+              "key": "production.waterAccess",
+              "operation": "add",
+              "value": 13,
+              "target": "production",
+              "label": "Adaptação hídrica +13"
+            },
+            {
+              "key": "finance.fixedCost",
+              "operation": "percent",
+              "value": 8,
+              "target": "finance",
+              "label": "Custos fixos +8%"
+            }
+          ]
+        },
+        {
+          "id": "reduzir-escala",
+          "label": "Reduzir temporariamente a escala",
+          "description": "Diminui pressão hídrica, mas reduz oferta e volume comercial.",
+          "outcome": "A operação preserva recursos, porém entrega menos produto.",
+          "effects": [
+            {
+              "key": "production.waterAccess",
+              "operation": "add",
+              "value": 8,
+              "target": "production",
+              "label": "Pressão hídrica reduzida +8"
+            },
+            {
+              "key": "production.supplyIndex",
+              "operation": "percent",
+              "value": -14,
+              "target": "production",
+              "label": "Oferta -14%"
+            },
+            {
+              "key": "finance.volume",
+              "operation": "percent",
+              "value": -12,
+              "target": "finance",
+              "label": "Volume esperado -12%"
+            }
+          ]
+        },
+        {
+          "id": "manter-plano",
+          "label": "Manter o plano sem adaptação",
+          "description": "Evita investimento imediato, mas aumenta risco de queda de qualidade.",
+          "outcome": "A seca atinge diretamente produtividade e qualidade da matéria-prima.",
+          "effects": [
+            {
+              "key": "production.supplyIndex",
+              "operation": "percent",
+              "value": -12,
+              "target": "production",
+              "label": "Oferta -12%"
+            },
+            {
+              "key": "production.handlingQuality",
+              "operation": "add",
+              "value": -8,
+              "target": "production",
+              "label": "Qualidade de manejo -8"
+            },
+            {
+              "key": "processing.qualityIndex",
+              "operation": "add",
+              "value": -7,
+              "target": "processing",
+              "label": "Qualidade industrial -7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conflito-governanca",
+      "title": "Conflito sobre regras e distribuição de benefícios",
+      "category": "governanca",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado"
+      ],
+      "trigger": {
+        "afterStage": "governance"
+      },
+      "description": "Parte dos membros questiona decisões recentes. A forma de resposta afetará confiança, reputação e velocidade de decisão.",
+      "baseEffects": [
+        {
+          "key": "marketing.trust",
+          "operation": "add",
+          "value": -7,
+          "target": "marketing",
+          "label": "Confiança inicial -7"
+        }
+      ],
+      "choices": [
+        {
+          "id": "assembleia-transparente",
+          "label": "Realizar assembleia transparente",
+          "description": "Aumenta participação e confiança, com algum custo de coordenação.",
+          "outcome": "A governança se fortalece e a reputação externa melhora.",
+          "effects": [
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": 15,
+              "target": "marketing",
+              "label": "Confiança +15"
+            },
+            {
+              "key": "finance.fixedCost",
+              "operation": "percent",
+              "value": 3,
+              "target": "finance",
+              "label": "Custo de coordenação +3%"
+            }
+          ]
+        },
+        {
+          "id": "comite-mediacao",
+          "label": "Criar comitê de mediação",
+          "description": "Resposta intermediária que melhora confiança sem paralisar decisões.",
+          "outcome": "O conflito é administrado com ganho moderado de confiança.",
+          "effects": [
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": 9,
+              "target": "marketing",
+              "label": "Confiança +9"
+            },
+            {
+              "key": "pricing.demandRisk",
+              "operation": "add",
+              "value": -3,
+              "target": "pricing",
+              "label": "Risco de demanda -3"
+            }
+          ]
+        },
+        {
+          "id": "centralizar-decisao",
+          "label": "Centralizar a decisão para ganhar velocidade",
+          "description": "A decisão é rápida, mas pode reduzir legitimidade.",
+          "outcome": "A organização ganha velocidade, porém carrega risco reputacional.",
+          "effects": [
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": -8,
+              "target": "marketing",
+              "label": "Confiança adicional -8"
+            },
+            {
+              "key": "pricing.demandRisk",
+              "operation": "add",
+              "value": 9,
+              "target": "pricing",
+              "label": "Risco de demanda +9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "variacao-lote",
+      "title": "O lote processado apresenta variabilidade de qualidade",
+      "category": "qualidade",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "trigger": {
+        "afterStage": "processing"
+      },
+      "description": "Parte do lote apresenta diferença de padrão. A decisão afetará custo, qualidade final e confiança do mercado.",
+      "baseEffects": [
+        {
+          "key": "processing.qualityIndex",
+          "operation": "add",
+          "value": -6,
+          "target": "processing",
+          "label": "Variação do lote -6"
+        }
+      ],
+      "choices": [
+        {
+          "id": "reprocessar-controlar",
+          "label": "Reprocessar e reforçar controle de qualidade",
+          "description": "Recupera qualidade com maior custo variável.",
+          "outcome": "O produto ganha consistência, mas custa mais produzir.",
+          "effects": [
+            {
+              "key": "processing.qualityIndex",
+              "operation": "add",
+              "value": 10,
+              "target": "processing",
+              "label": "Controle de qualidade +10"
+            },
+            {
+              "key": "finance.variableCost",
+              "operation": "percent",
+              "value": 6,
+              "target": "finance",
+              "label": "Custo variável +6%"
+            },
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": 4,
+              "target": "marketing",
+              "label": "Confiança +4"
+            }
+          ]
+        },
+        {
+          "id": "segmentar-lote",
+          "label": "Separar lotes por padrão e mercado",
+          "description": "Preserva os melhores lotes e cria posicionamentos diferentes.",
+          "outcome": "A empresa reduz perdas e mantém confiança moderada.",
+          "effects": [
+            {
+              "key": "processing.qualityIndex",
+              "operation": "add",
+              "value": 5,
+              "target": "processing",
+              "label": "Qualidade média +5"
+            },
+            {
+              "key": "pricing.demandRisk",
+              "operation": "add",
+              "value": -4,
+              "target": "pricing",
+              "label": "Risco de demanda -4"
+            },
+            {
+              "key": "finance.volume",
+              "operation": "percent",
+              "value": -5,
+              "target": "finance",
+              "label": "Volume premium -5%"
+            }
+          ]
+        },
+        {
+          "id": "vender-sem-ajuste",
+          "label": "Vender sem ajuste adicional",
+          "description": "Reduz custos imediatos, mas aumenta risco reputacional.",
+          "outcome": "O caixa é preservado no curto prazo, com perda de confiança.",
+          "effects": [
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": -13,
+              "target": "marketing",
+              "label": "Confiança -13"
+            },
+            {
+              "key": "pricing.demandRisk",
+              "operation": "add",
+              "value": 10,
+              "target": "pricing",
+              "label": "Risco de demanda +10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exigencia-rastreabilidade",
+      "title": "Comprador exige comprovação de sustentabilidade",
+      "category": "mercado",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "trigger": {
+        "afterStage": "circularity"
+      },
+      "description": "Um potencial comprador aceita pagar mais, mas exige rastreabilidade e evidências ambientais.",
+      "choices": [
+        {
+          "id": "implantar-rastreabilidade",
+          "label": "Implantar rastreabilidade e comprovação",
+          "description": "Eleva credibilidade e valor sustentável, mas requer investimento.",
+          "outcome": "O produto ganha base mais sólida para comunicar sustentabilidade.",
+          "effects": [
+            {
+              "key": "marketing.sustainableConsumption",
+              "operation": "add",
+              "value": 14,
+              "target": "marketing",
+              "label": "Valor sustentável +14"
+            },
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": 8,
+              "target": "marketing",
+              "label": "Confiança +8"
+            },
+            {
+              "key": "pricing.price",
+              "operation": "percent",
+              "value": 4,
+              "target": "pricing",
+              "label": "Capacidade de preço +4%"
+            },
+            {
+              "key": "finance.fixedCost",
+              "operation": "percent",
+              "value": 4,
+              "target": "finance",
+              "label": "Rastreabilidade +4% custo fixo"
+            }
+          ]
+        },
+        {
+          "id": "parceria-territorial",
+          "label": "Criar comprovação coletiva com parceiros locais",
+          "description": "Divide custos e fortalece narrativa territorial.",
+          "outcome": "A comprovação melhora com benefício distribuído entre atores.",
+          "effects": [
+            {
+              "key": "marketing.sustainableConsumption",
+              "operation": "add",
+              "value": 10,
+              "target": "marketing",
+              "label": "Valor sustentável +10"
+            },
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": 6,
+              "target": "marketing",
+              "label": "Confiança +6"
+            },
+            {
+              "key": "finance.fixedCost",
+              "operation": "percent",
+              "value": 2,
+              "target": "finance",
+              "label": "Custo compartilhado +2%"
+            }
+          ]
+        },
+        {
+          "id": "usar-apenas-alegacao",
+          "label": "Usar apenas uma alegação promocional",
+          "description": "É barato, mas cria risco de greenwashing e perda de confiança.",
+          "outcome": "A comunicação fica vulnerável por falta de comprovação.",
+          "effects": [
+            {
+              "key": "marketing.trust",
+              "operation": "add",
+              "value": -15,
+              "target": "marketing",
+              "label": "Confiança -15"
+            },
+            {
+              "key": "marketing.sustainableConsumption",
+              "operation": "add",
+              "value": -12,
+              "target": "marketing",
+              "label": "Valor sustentável -12"
+            },
+            {
+              "key": "pricing.demandRisk",
+              "operation": "add",
+              "value": 12,
+              "target": "pricing",
+              "label": "Risco de demanda +12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "oscilacao-demanda",
+      "title": "A demanda do mercado fica mais incerta",
+      "category": "mercado",
+      "missionIds": [
+        "produto-territorial-da-origem-ao-resultado",
+        "produto-agroindustrial-circular"
+      ],
+      "trigger": {
+        "afterStage": "marketing"
+      },
+      "description": "O interesse inicial existe, mas concorrência e sazonalidade aumentaram. A estratégia comercial terá impacto no preço e no volume.",
+      "baseEffects": [
+        {
+          "key": "finance.volume",
+          "operation": "percent",
+          "value": -10,
+          "target": "finance",
+          "label": "Demanda base -10%"
+        }
+      ],
+      "choices": [
+        {
+          "id": "diversificar-canais",
+          "label": "Diversificar canais de venda",
+          "description": "Recupera parte do volume com maior custo comercial.",
+          "outcome": "A operação reduz dependência de um único canal.",
+          "effects": [
+            {
+              "key": "finance.volume",
+              "operation": "percent",
+              "value": 9,
+              "target": "finance",
+              "label": "Volume recuperado +9%"
+            },
+            {
+              "key": "finance.fixedCost",
+              "operation": "percent",
+              "value": 3,
+              "target": "finance",
+              "label": "Canais comerciais +3%"
+            },
+            {
+              "key": "pricing.demandRisk",
+              "operation": "add",
+              "value": -5,
+              "target": "pricing",
+              "label": "Risco de demanda -5"
+            }
+          ]
+        },
+        {
+          "id": "parceria-turismo",
+          "label": "Vincular produto a experiências turísticas",
+          "description": "Cria um canal territorial com maior valor percebido.",
+          "outcome": "A demanda melhora e o posicionamento territorial se fortalece.",
+          "effects": [
+            {
+              "key": "finance.volume",
+              "operation": "percent",
+              "value": 12,
+              "target": "finance",
+              "label": "Volume turístico +12%"
+            },
+            {
+              "key": "marketing.marketFit",
+              "operation": "add",
+              "value": 8,
+              "target": "marketing",
+              "label": "Adequação +8"
+            },
+            {
+              "key": "pricing.price",
+              "operation": "percent",
+              "value": 3,
+              "target": "pricing",
+              "label": "Valor percebido +3%"
+            }
+          ]
+        },
+        {
+          "id": "reduzir-preco",
+          "label": "Reduzir preço para estimular demanda",
+          "description": "Pode recuperar giro, porém pressiona margem.",
+          "outcome": "A demanda reage, mas o resultado por unidade diminui.",
+          "effects": [
+            {
+              "key": "pricing.price",
+              "operation": "percent",
+              "value": -8,
+              "target": "pricing",
+              "label": "Preço -8%"
+            },
+            {
+              "key": "pricing.demandRisk",
+              "operation": "add",
+              "value": -10,
+              "target": "pricing",
+              "label": "Risco de demanda -10"
+            },
+            {
+              "key": "finance.volume",
+              "operation": "percent",
+              "value": 7,
+              "target": "finance",
+              "label": "Volume +7%"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0"
+}

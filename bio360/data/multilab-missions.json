@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "missions": [
+    {
+      "id": "produto-territorial-da-origem-ao-resultado",
+      "title": "Produto Territorial — da origem ao resultado",
+      "level": "desafio",
+      "description": "Desenvolva o mesmo produto bioeconômico desde o diagnóstico territorial até a viabilidade e o Projeto Integrador.",
+      "productPrompt": "Defina um produto, matéria-prima e território. Essa identidade acompanhará toda a missão.",
+      "completion": {
+        "evidenceMin": 5,
+        "eventsResolved": true
+      },
+      "stages": [
+        {
+          "id": "territory",
+          "title": "Diagnosticar o território",
+          "route": "/lab/territorio-bioeconomico",
+          "transferTypes": [
+            "territory-diagnosis"
+          ],
+          "instruction": "Investigue hotspots e envie o diagnóstico para um laboratório de produção."
+        },
+        {
+          "id": "governance",
+          "title": "Definir governança",
+          "route": "/lab/associativismo-cooperativismo",
+          "transferTypes": [
+            "governance-model"
+          ],
+          "instruction": "Simule participação, transparência e regras da organização."
+        },
+        {
+          "id": "production",
+          "title": "Produzir a matéria-prima",
+          "route": "/lab/producao-vegetal",
+          "transferTypes": [
+            "raw-material-batch"
+          ],
+          "instruction": "Aplique o diagnóstico territorial e envie um lote à Agroindústria."
+        },
+        {
+          "id": "processing",
+          "title": "Processar e agregar valor",
+          "route": "/lab/agroindustria",
+          "transferTypes": [
+            "processed-product"
+          ],
+          "instruction": "Receba o lote, percorra a planta e envie o produto ao Marketing."
+        },
+        {
+          "id": "circularity",
+          "title": "Planejar circularidade",
+          "route": "/lab/economia-circular",
+          "transferTypes": [
+            "circularity-performance"
+          ],
+          "instruction": "Defina uma rota circular, avalie os indicadores e registre o desempenho na missão."
+        },
+        {
+          "id": "marketing",
+          "title": "Construir posicionamento",
+          "route": "/lab/marketing-consumo-sustentavel",
+          "transferTypes": [
+            "market-strategy"
+          ],
+          "instruction": "Defina público, narrativa, credibilidade e envie à Precificação."
+        },
+        {
+          "id": "tourism",
+          "title": "Relacionar produto e território",
+          "route": "/lab/turismo-sustentavel",
+          "transferTypes": [
+            "tourism-planning"
+          ],
+          "instruction": "Planeje visitação e participação local relacionada ao território.",
+          "optional": true
+        },
+        {
+          "id": "pricing",
+          "title": "Definir estratégia de preço",
+          "route": "/tool/precificacao-posicionamento",
+          "transferTypes": [
+            "pricing-strategy"
+          ],
+          "instruction": "Calcule preço-base, preço sugerido e ponto de equilíbrio."
+        },
+        {
+          "id": "finance",
+          "title": "Validar resultado financeiro",
+          "route": "/tool/gestao-financeira",
+          "transferTypes": [
+            "financial-result"
+          ],
+          "instruction": "Aplique a estratégia de preço e envie o resultado ao Projeto Integrador."
+        },
+        {
+          "id": "chain",
+          "title": "Revisar a cadeia integrada",
+          "route": "/lab/cadeia-produtiva",
+          "transferTypes": [
+            "integrated-chain"
+          ],
+          "instruction": "Revise o passaporte do produto e envie a síntese ao Projeto Integrador."
+        },
+        {
+          "id": "project",
+          "title": "Consolidar Projeto Integrador",
+          "route": "/module/projeto-integrador",
+          "projectProgressMin": 50,
+          "instruction": "Organize os oito eixos do projeto até atingir pelo menos 50% de preenchimento."
+        }
+      ]
+    },
+    {
+      "id": "produto-agroindustrial-circular",
+      "title": "Produto Agroindustrial Circular",
+      "level": "intermediario",
+      "description": "Missão mais curta voltada à produção, processamento, circularidade, mercado e viabilidade.",
+      "productPrompt": "Crie um produto agroindustrial e mantenha a mesma identidade ao longo das etapas.",
+      "completion": {
+        "evidenceMin": 3,
+        "eventsResolved": true
+      },
+      "stages": [
+        {
+          "id": "territory",
+          "title": "Contextualizar território",
+          "route": "/lab/territorio-bioeconomico",
+          "transferTypes": [
+            "territory-diagnosis"
+          ],
+          "instruction": "Gere um diagnóstico territorial."
+        },
+        {
+          "id": "production",
+          "title": "Gerar lote produtivo",
+          "route": "/lab/producao-vegetal",
+          "transferTypes": [
+            "raw-material-batch"
+          ],
+          "instruction": "Produza e envie matéria-prima à Agroindústria."
+        },
+        {
+          "id": "processing",
+          "title": "Transformar o produto",
+          "route": "/lab/agroindustria",
+          "transferTypes": [
+            "processed-product"
+          ],
+          "instruction": "Processe e envie o produto ao Marketing."
+        },
+        {
+          "id": "circularity",
+          "title": "Tratar subprodutos",
+          "route": "/lab/economia-circular",
+          "transferTypes": [
+            "circularity-performance"
+          ],
+          "instruction": "Defina uma rota circular, avalie os indicadores e registre o desempenho na missão."
+        },
+        {
+          "id": "marketing",
+          "title": "Posicionar produto",
+          "route": "/lab/marketing-consumo-sustentavel",
+          "transferTypes": [
+            "market-strategy"
+          ],
+          "instruction": "Defina estratégia de mercado."
+        },
+        {
+          "id": "pricing",
+          "title": "Precificar",
+          "route": "/tool/precificacao-posicionamento",
+          "transferTypes": [
+            "pricing-strategy"
+          ],
+          "instruction": "Defina preço e contribuição."
+        },
+        {
+          "id": "finance",
+          "title": "Analisar viabilidade",
+          "route": "/tool/gestao-financeira",
+          "transferTypes": [
+            "financial-result"
+          ],
+          "instruction": "Calcule o resultado financeiro."
+        },
+        {
+          "id": "project",
+          "title": "Registrar no Projeto Integrador",
+          "route": "/module/projeto-integrador",
+          "projectProgressMin": 35,
+          "instruction": "Preencha pelo menos 35% do Projeto Integrador."
+        }
+      ]
+    }
+  ]
+}

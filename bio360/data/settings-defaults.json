@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "theme": "dark",
+  "graphicProfile": "balanced",
+  "autoQuality": true,
+  "reduceMotion": false,
+  "dataSaver": false,
+  "scenarioEngine": true
+}
