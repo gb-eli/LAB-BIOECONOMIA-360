@@ -1,0 +1,12 @@
+[data-module="lab-turismo-sustentavel"] .decision-grid{
+  display:grid;
+  gap:12px;
+}
+[data-module="lab-turismo-sustentavel"] .decision-score{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+}
+@media(max-width:600px){
+  [data-module="lab-turismo-sustentavel"] .decision-score{grid-template-columns:1fr;}
+}

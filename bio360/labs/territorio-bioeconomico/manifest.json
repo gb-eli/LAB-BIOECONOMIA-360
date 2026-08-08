@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-territorio-bioeconomico",
+  "name": "Território Bioeconômico 360",
+  "version": "0.16.0",
+  "type": "lab",
+  "description": "Experiência 3D G13 com feedback sonoro posicional e estado operacional para bomba, irrigação, sinalização e fluxo circular.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/territorio-bioeconomico",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "360-transition",
+    "3d",
+    "adaptive-shadows",
+    "ambient-audio",
+    "animated-water",
+    "assets-gltf",
+    "consequence-reactive-water",
+    "curriculum",
+    "fallback-2d",
+    "g4-assets",
+    "g4-realism",
+    "g5-vegetation",
+    "graphics",
+    "hotspot-preservation",
+    "lab-context",
+    "local-pbr",
+    "procedural-pbr",
+    "runtime-quality-governor",
+    "simulation",
+    "sky-dome",
+    "visual-consequences"
+  ],
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Tecnologias sociais e identidade territorial",
+      "Sustentabilidade",
+      "Soluções sustentáveis",
+      "Gestão da atividade turística",
+      "Técnicas de produção animal e vegetal"
+    ],
+    "knowledge": [
+      "Território",
+      "Arranjos produtivos locais",
+      "Serviços ambientais",
+      "Economia circular",
+      "Turismo sustentável"
+    ]
+  },
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "experienceClass": "experiencia-3d",
+  "graphicsGeneration": "G13"
+}

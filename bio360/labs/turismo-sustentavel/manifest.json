@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-turismo-sustentavel",
+  "name": "Turismo Sustentável 3D",
+  "version": "0.15.0",
+  "type": "lab",
+  "description": "Experiência 3D G13 com feedback sonoro posicional e estado operacional nos pontos acionáveis do percurso.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/turismo-sustentavel",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "adaptive-shadows",
+    "animated-water",
+    "consequence-reactive-water",
+    "curriculum",
+    "dynamic-tourism-lod",
+    "fallback-2d",
+    "g5-vegetation",
+    "g6-tourism-gateway",
+    "ibl-local",
+    "instanced-trail-markers",
+    "runtime-quality-governor",
+    "scene-complexity-budget",
+    "shadow-regions",
+    "simulation"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Gestão da atividade turística",
+      "Roteirização turística",
+      "Sustentabilidade",
+      "Tecnologias sociais e identidade territorial"
+    ],
+    "knowledge": [
+      "Turismo sustentável",
+      "Atrativos naturais",
+      "Capacidade de visitação",
+      "Roteirização",
+      "Experiência do visitante",
+      "Comunidade local"
+    ]
+  },
+  "experienceClass": "experiencia-3d",
+  "graphicsGeneration": "G13"
+}
