@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-biodigestor",
+  "name": "Biodigestor Virtual",
+  "version": "0.1.0",
+  "type": "lab",
+  "description": "Simulação didática 3D de entrada de resíduos, biodigestão, biogás e biofertilizante.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/biodigestor",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "simulation",
+    "curriculum",
+    "fallback-2d"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2"
+    ],
+    "units": [
+      "Sustentabilidade",
+      "Soluções sustentáveis",
+      "Técnicas de produção animal e vegetal"
+    ],
+    "knowledge": [
+      "Resíduos orgânicos",
+      "Biodigestor",
+      "Biogás",
+      "Biofertilizante",
+      "Economia circular"
+    ]
+  },
+  "experienceClass": "simulador-3d"
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-associativismo-cooperativismo",
+  "name": "Associativismo e Cooperativismo 3D",
+  "version": "0.5.0",
+  "type": "lab",
+  "description": "Associativismo e Cooperativismo 3D G6 com membros instanciados, LOD de governança, IBL, regiões de sombra e Quality Governor.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/associativismo-cooperativismo",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "assets-gltf",
+    "curriculum",
+    "dynamic-governance-lod",
+    "evidence",
+    "fallback-2d",
+    "g4-assets",
+    "ibl-local",
+    "instanced-members",
+    "lab-context",
+    "runtime-quality-governor",
+    "scenario-v2",
+    "scenarios",
+    "shadow-regions",
+    "simulation"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Liderança e associativismo",
+      "Gestão e empreendedorismo",
+      "Tecnologias sociais e identidade territorial"
+    ],
+    "knowledge": [
+      "Associativismo",
+      "Cooperativismo",
+      "Governança",
+      "Participação",
+      "Tomada de decisão",
+      "Transparência",
+      "Recursos compartilhados"
+    ]
+  },
+  "experienceClass": "simulacao-3d"
+}

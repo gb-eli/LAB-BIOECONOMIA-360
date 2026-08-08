@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 2,
+  "moduleId": "lab-associativismo-cooperativismo",
+  "scenarios": [
+    {
+      "id": "associacao-produtores",
+      "title": "Associação de pequenos produtores",
+      "level": "iniciante",
+      "context": "Produtores do mesmo território querem comprar insumos e organizar vendas coletivamente.",
+      "objective": "Criar uma organização participativa com confiança e recursos compartilhados.",
+      "inputs": {
+        "members": 12,
+        "participation": 72,
+        "transparency": 76,
+        "sharedAssets": 58,
+        "reserveFund": 45,
+        "decisionModel": "democratico",
+        "organizationModel": "associacao"
+      },
+      "goals": {
+        "governance": {
+          "min": 70,
+          "label": "Governança"
+        },
+        "fairness": {
+          "min": 68,
+          "label": "Equidade"
+        },
+        "viability": {
+          "min": 60,
+          "label": "Viabilidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Que regras de participação e transparência você considera essenciais para esta associação?"
+        }
+      ]
+    },
+    {
+      "id": "cooperativa-expansao",
+      "title": "Cooperativa em expansão",
+      "level": "intermediario",
+      "context": "A organização cresceu e precisa manter participação sem perder agilidade operacional.",
+      "objective": "Equilibrar escala, recursos compartilhados, reservas e governança.",
+      "inputs": {
+        "members": 28,
+        "participation": 64,
+        "transparency": 72,
+        "sharedAssets": 82,
+        "reserveFund": 68,
+        "decisionModel": "comites",
+        "organizationModel": "cooperativa"
+      },
+      "goals": {
+        "governance": {
+          "min": 68,
+          "label": "Governança"
+        },
+        "viability": {
+          "min": 76,
+          "label": "Viabilidade"
+        },
+        "resilience": {
+          "min": 72,
+          "label": "Resiliência"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como sua estrutura de decisão evita que o crescimento reduza a participação dos membros?"
+        }
+      ]
+    },
+    {
+      "id": "comunidade-tradicional",
+      "title": "Organização comunitária territorial",
+      "level": "desafio",
+      "context": "Uma comunidade quer gerar renda preservando decisões coletivas, identidade territorial e benefícios compartilhados.",
+      "objective": "Maximizar participação, equidade e resiliência sem tornar a organização inviável.",
+      "inputs": {
+        "members": 20,
+        "participation": 88,
+        "transparency": 86,
+        "sharedAssets": 62,
+        "reserveFund": 54,
+        "decisionModel": "democratico",
+        "organizationModel": "rede-comunitaria"
+      },
+      "goals": {
+        "governance": {
+          "min": 82,
+          "label": "Governança"
+        },
+        "fairness": {
+          "min": 82,
+          "label": "Equidade"
+        },
+        "resilience": {
+          "min": 68,
+          "label": "Resiliência"
+        },
+        "viability": {
+          "min": 62,
+          "label": "Viabilidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como sua proposta protege a participação comunitária e distribui benefícios de maneira coerente?"
+        }
+      ]
+    }
+  ]
+}
