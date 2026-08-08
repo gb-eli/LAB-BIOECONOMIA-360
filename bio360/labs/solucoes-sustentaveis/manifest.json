@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-solucoes-sustentaveis",
+  "name": "Soluções Sustentáveis 3D",
+  "version": "0.1.0",
+  "type": "lab",
+  "description": "Laboratório 3D para combinar eficiência hídrica, energia renovável, recuperação de resíduos e investimento em soluções sustentáveis.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/solucoes-sustentaveis",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "simulation",
+    "scenarios",
+    "scenario-v2",
+    "evidence",
+    "curriculum",
+    "fallback-2d",
+    "lab-context",
+    "consequences",
+    "branch-stage"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "2",
+      "3"
+    ],
+    "units": [
+      "Soluções sustentáveis",
+      "Sustentabilidade",
+      "Tecnologias sociais e identidade territorial"
+    ],
+    "knowledge": [
+      "Eficiência hídrica",
+      "Energia renovável",
+      "Recuperação de resíduos",
+      "Tecnologias sociais",
+      "Resiliência",
+      "Ecoeficiência"
+    ]
+  },
+  "experienceClass": "simulacao-3d"
+}

@@ -1,0 +1,10 @@
+[data-module="lab-solucoes-sustentaveis"] .solution-score{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;
+}
+[data-module="lab-solucoes-sustentaveis"] .solution-impact{
+  border-color:rgba(230,177,81,.42);
+  background:linear-gradient(145deg,rgba(230,177,81,.07),transparent 55%),var(--surface);
+}
+@media(max-width:520px){
+  [data-module="lab-solucoes-sustentaveis"] .solution-score{grid-template-columns:1fr;}
+}

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 2,
+  "moduleId": "lab-solucoes-sustentaveis",
+  "scenarios": [
+    {
+      "id": "estresse-hidrico",
+      "title": "Resposta ao estresse hídrico",
+      "level": "intermediario",
+      "context": "A disponibilidade de água caiu e o sistema produtivo precisa se adaptar.",
+      "objective": "Recuperar resiliência sem tornar a solução economicamente inviável.",
+      "inputs": {
+        "waterEfficiency": 78,
+        "renewable": 42,
+        "recovery": 55,
+        "investment": 58
+      },
+      "goals": {
+        "resilience": {
+          "min": 72,
+          "label": "Resiliência"
+        },
+        "ecoEfficiency": {
+          "min": 68,
+          "label": "Ecoeficiência"
+        },
+        "feasibility": {
+          "min": 58,
+          "label": "Viabilidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Que combinação de tecnologia e mudança de processo é mais adequada ao problema hídrico?"
+        }
+      ]
+    },
+    {
+      "id": "transicao-energetica",
+      "title": "Transição energética gradual",
+      "level": "intermediario",
+      "context": "A organização quer reduzir dependência energética sem comprometer caixa e produção.",
+      "objective": "Aumentar renováveis mantendo capacidade de implementação.",
+      "inputs": {
+        "waterEfficiency": 55,
+        "renewable": 82,
+        "recovery": 58,
+        "investment": 62
+      },
+      "goals": {
+        "ecoEfficiency": {
+          "min": 74,
+          "label": "Ecoeficiência"
+        },
+        "feasibility": {
+          "min": 58,
+          "label": "Viabilidade"
+        },
+        "implementation": {
+          "min": 62,
+          "label": "Implementação"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Por que uma transição gradual pode ser mais apropriada do que substituir tudo de uma vez?"
+        }
+      ]
+    },
+    {
+      "id": "solucao-integrada",
+      "title": "Solução integrada do território",
+      "level": "desafio",
+      "context": "Água, resíduos e energia precisam ser tratados como partes do mesmo sistema.",
+      "objective": "Construir uma solução equilibrada e replicável no território.",
+      "inputs": {
+        "waterEfficiency": 82,
+        "renewable": 76,
+        "recovery": 88,
+        "investment": 72
+      },
+      "goals": {
+        "resilience": {
+          "min": 80,
+          "label": "Resiliência"
+        },
+        "ecoEfficiency": {
+          "min": 82,
+          "label": "Ecoeficiência"
+        },
+        "implementation": {
+          "min": 68,
+          "label": "Implementação"
+        },
+        "feasibility": {
+          "min": 60,
+          "label": "Viabilidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como a solução proposta pode gerar benefício compartilhado no território?"
+        }
+      ]
+    }
+  ]
+}

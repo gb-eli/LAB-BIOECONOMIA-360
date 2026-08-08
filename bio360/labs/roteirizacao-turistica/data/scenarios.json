@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 2,
+  "moduleId": "lab-roteirizacao-turistica",
+  "scenarios": [
+    {
+      "id": "meio-dia",
+      "title": "Roteiro de meio dia",
+      "level": "iniciante",
+      "context": "Um grupo possui somente quatro horas para conhecer o território.",
+      "objective": "Selecionar poucas paradas, reduzir deslocamentos e manter boa experiência.",
+      "inputs": {
+        "maxStops": 3,
+        "timeBudget": 240,
+        "transport": "van"
+      },
+      "goals": {
+        "experience": {
+          "min": 70,
+          "label": "Experiência"
+        },
+        "logistics": {
+          "min": 70,
+          "label": "Logística"
+        },
+        "sustainability": {
+          "min": 60,
+          "label": "Sustentabilidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Por que você escolheu essas paradas e essa ordem para um roteiro curto?"
+        }
+      ]
+    },
+    {
+      "id": "dia-completo",
+      "title": "Roteiro de dia completo",
+      "level": "intermediario",
+      "context": "Visitantes querem natureza, cultura e produtos locais em um único dia.",
+      "objective": "Combinar diferentes tipos de atrativos respeitando o tempo disponível.",
+      "inputs": {
+        "maxStops": 5,
+        "timeBudget": 480,
+        "transport": "van"
+      },
+      "goals": {
+        "experience": {
+          "min": 76,
+          "label": "Experiência"
+        },
+        "logistics": {
+          "min": 64,
+          "label": "Logística"
+        },
+        "sustainability": {
+          "min": 66,
+          "label": "Sustentabilidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como seu roteiro equilibra variedade, deslocamento e tempo em cada atrativo?"
+        }
+      ]
+    },
+    {
+      "id": "base-comunitaria",
+      "title": "Roteiro de base comunitária",
+      "level": "desafio",
+      "context": "O objetivo é gerar benefícios locais sem concentrar o roteiro apenas nos pontos mais conhecidos.",
+      "objective": "Priorizar comunidade e território, mantendo logística e experiência satisfatórias.",
+      "inputs": {
+        "maxStops": 5,
+        "timeBudget": 420,
+        "transport": "microonibus"
+      },
+      "goals": {
+        "experience": {
+          "min": 72,
+          "label": "Experiência"
+        },
+        "logistics": {
+          "min": 58,
+          "label": "Logística"
+        },
+        "sustainability": {
+          "min": 78,
+          "label": "Sustentabilidade"
+        },
+        "localBenefit": {
+          "min": 76,
+          "label": "Benefício local"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Que decisões do roteiro aumentam o benefício local e evitam uma visita apenas superficial ao território?"
+        }
+      ]
+    }
+  ]
+}
