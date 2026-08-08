@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "module-historico-multilab",
+  "name": "Histórico de Missões MultiLab",
+  "version": "0.3.0",
+  "type": "module",
+  "description": "Histórico MultiLab com inspeção não destrutiva, clonagem pública e exportação/importação completa de sessões.",
+  "entry": "./module.js",
+  "style": "./module.css",
+  "route": "/module/historico-multilab",
+  "enabled": true
+}

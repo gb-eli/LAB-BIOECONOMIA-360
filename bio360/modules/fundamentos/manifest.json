@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "module-fundamentos",
+  "name": "Fundamentos da Bioeconomia",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Entrada conceitual: sustentabilidade, território, gestão e cadeias de valor.",
+  "entry": "./module.js",
+  "style": "./module.css",
+  "route": "/module/fundamentos",
+  "enabled": true,
+  "curriculum": {
+    "series": [
+      "1"
+    ],
+    "units": [
+      "Sustentabilidade",
+      "Tecnologias sociais e identidade territorial"
+    ]
+  }
+}
