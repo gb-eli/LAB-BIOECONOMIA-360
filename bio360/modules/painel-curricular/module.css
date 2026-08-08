@@ -1,0 +1,47 @@
+[data-module="module-painel-curricular"] .curriculum-table{
+  display:grid;
+  gap:10px;
+}
+[data-module="module-painel-curricular"] .curriculum-row{
+  display:grid;
+  grid-template-columns:minmax(180px,1.5fr) 90px 90px minmax(130px,1fr);
+  gap:12px;
+  align-items:center;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  background:var(--surface);
+}
+[data-module="module-painel-curricular"] .curriculum-row strong{
+  display:block;
+}
+[data-module="module-painel-curricular"] .curriculum-row small{
+  color:var(--muted);
+}
+[data-module="module-painel-curricular"] .mini-progress{
+  height:8px;
+  border-radius:999px;
+  background:var(--surface-3);
+  overflow:hidden;
+}
+[data-module="module-painel-curricular"] .mini-progress span{
+  display:block;height:100%;background:var(--accent);border-radius:inherit;
+}
+[data-module="module-painel-curricular"] .evidence-history{
+  display:grid;gap:8px;
+}
+[data-module="module-painel-curricular"] .evidence-item{
+  padding:11px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--surface-2);
+}
+@media(max-width:760px){
+  [data-module="module-painel-curricular"] .curriculum-row{
+    grid-template-columns:1fr 1fr;
+  }
+  [data-module="module-painel-curricular"] .curriculum-row > :first-child,
+  [data-module="module-painel-curricular"] .curriculum-row > :last-child{
+    grid-column:1/-1;
+  }
+}

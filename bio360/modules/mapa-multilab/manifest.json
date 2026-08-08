@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "module-mapa-multilab",
+  "name": "Mapa 3D da Missão",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Árvore visual 3D da Missão MultiLab com etapas, ramificações, eventos e estado do produto.",
+  "entry": "./module.js",
+  "style": "./module.css",
+  "route": "/module/mapa-multilab",
+  "enabled": true
+}
