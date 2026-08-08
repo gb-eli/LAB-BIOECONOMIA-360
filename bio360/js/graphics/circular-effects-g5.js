@@ -1,0 +1,11 @@
+export function createCircularEffectsG5(THREE){
+  const attach=(scene,{nodes,profile}={})=>{
+    const group=new THREE.Group();scene.add(group);
+    const make=(count,color,size)=>{const positions=new Float32Array(count*3),geo=new THREE.BufferGeometry();geo.setAttribute("position",new THREE.BufferAttribute(positions,3));const mat=new THREE.PointsMaterial({color,size,transparent:true,opacity:.72,depthWrite:false});const points=new THREE.Points(geo,mat);group.add(points);return{positions,geo,mat,points,count};};
+    const effluent=make(profile?.rank>=2?42:22,0x63b7c8,.075),compost=make(profile?.rank>=2?28:14,0xb9d0ba,.09),gas=make(profile?.rank>=2?24:12,0x8cd9b4,.075),recycle=make(profile?.rank>=2?34:18,0x73d5aa,.065);
+    const vec=p=>({x:p[0],y:p[1],z:p[2]}),src=vec(nodes.source.pos),fin=vec(nodes.final.pos),cmp=vec(nodes.compost.pos),bio=vec(nodes.bio.pos),rec=vec(nodes.recycle.pos);
+    const stream=(fx,a,b,t,intensity)=>{const n=Math.round(fx.count*intensity);fx.geo.setDrawRange(0,n);fx.points.visible=n>0;for(let i=0;i<n;i++){const ph=(t*.16+i/Math.max(1,n))%1,j=i*3;fx.positions[j]=a.x+(b.x-a.x)*ph;fx.positions[j+1]=a.y+(b.y-a.y)*ph+.18+Math.sin(ph*Math.PI)*.22;fx.positions[j+2]=a.z+(b.z-a.z)*ph+Math.sin((ph+i*.13)*6.28)*.13;}fx.geo.attributes.position.needsUpdate=true;};
+    const rise=(fx,c,t,intensity)=>{const n=Math.round(fx.count*intensity);fx.geo.setDrawRange(0,n);fx.points.visible=n>0;for(let i=0;i<n;i++){const ph=(t*.08+i/Math.max(1,n))%1,a=i*2.399+ph*2,j=i*3;fx.positions[j]=c.x+Math.cos(a)*(.2+ph*.45);fx.positions[j+1]=c.y+.3+ph*1.5;fx.positions[j+2]=c.z+Math.sin(a)*(.2+ph*.45);}fx.geo.attributes.position.needsUpdate=true;};
+    return{update:(t,c,budget=1)=>{const o=Math.min(1,(c?.organic||0)/100),w=Math.min(1,(c?.water||0)/100),r=Math.min(1,(c?.recyclable||0)/100),s=c?.strategy||"aterro",b=Math.max(.1,Math.min(1,Number(budget||1)));stream(effluent,src,fin,t,(s==="aterro"?w:w*.18)*b);rise(compost,cmp,t,(["compostagem","integrada"].includes(s)?o*.8:0)*b);rise(gas,bio,t,(["biodigestor","integrada"].includes(s)?o*.9:0)*b);rise(recycle,rec,t,(["reciclagem","integrada"].includes(s)?r*.75:0)*b);},dispose:()=>{for(const x of [effluent,compost,gas,recycle]){x.geo.dispose();x.mat.dispose();}scene.remove(group);}};
+  };return{attach};
+}

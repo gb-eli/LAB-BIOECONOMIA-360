@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-agroindustria",
+  "name": "Agroindústria Virtual",
+  "version": "0.16.0",
+  "type": "lab",
+  "description": "Experiência 3D G13 com cues posicionais e sons contínuos vinculados às máquinas realmente acionadas.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/agroindustria",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "360-transition",
+    "3d",
+    "adaptive-shadows",
+    "ambient-audio",
+    "assets-gltf",
+    "cold-mist",
+    "curriculum",
+    "dynamic-equipment-lod",
+    "fallback-2d",
+    "g4-assets",
+    "g4-realism",
+    "g5-equipment",
+    "graphics",
+    "hotspot-preservation",
+    "ibl-local",
+    "industrial-animation",
+    "lab-context",
+    "local-pbr",
+    "mixer-animation",
+    "procedural-pbr",
+    "runtime-quality-governor",
+    "scanner-animation",
+    "spatial-audio",
+    "visual-consequences",
+    "wash-jets"
+  ],
+  "curriculum": {
+    "series": [
+      "2",
+      "3"
+    ],
+    "units": [
+      "Cadeias produtivas e agroindústria"
+    ],
+    "knowledge": [
+      "Boas práticas de fabricação",
+      "Higiene e sanitização",
+      "Conservação de alimentos",
+      "Embalagem",
+      "Resíduos e subprodutos"
+    ]
+  },
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "experienceClass": "experiencia-3d",
+  "graphicsGeneration": "G13"
+}

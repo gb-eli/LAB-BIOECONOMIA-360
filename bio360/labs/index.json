@@ -1,0 +1,58 @@
+[
+  {
+    "id": "lab-sandbox",
+    "manifest": "./sandbox/manifest.json"
+  },
+  {
+    "id": "lab-territorio-bioeconomico",
+    "manifest": "./territorio-bioeconomico/manifest.json"
+  },
+  {
+    "id": "lab-cadeia-produtiva",
+    "manifest": "./cadeia-produtiva/manifest.json"
+  },
+  {
+    "id": "lab-agroindustria",
+    "manifest": "./agroindustria/manifest.json"
+  },
+  {
+    "id": "lab-biodigestor",
+    "manifest": "./biodigestor/manifest.json"
+  },
+  {
+    "id": "lab-turismo-sustentavel",
+    "manifest": "./turismo-sustentavel/manifest.json"
+  },
+  {
+    "id": "lab-producao-vegetal",
+    "manifest": "./producao-vegetal/manifest.json"
+  },
+  {
+    "id": "lab-producao-animal",
+    "manifest": "./producao-animal/manifest.json"
+  },
+  {
+    "id": "lab-economia-circular",
+    "manifest": "./economia-circular/manifest.json"
+  },
+  {
+    "id": "lab-roteirizacao-turistica",
+    "manifest": "./roteirizacao-turistica/manifest.json"
+  },
+  {
+    "id": "lab-associativismo-cooperativismo",
+    "manifest": "./associativismo-cooperativismo/manifest.json"
+  },
+  {
+    "id": "lab-marketing-consumo-sustentavel",
+    "manifest": "./marketing-consumo-sustentavel/manifest.json"
+  },
+  {
+    "id": "lab-solucoes-sustentaveis",
+    "manifest": "./solucoes-sustentaveis/manifest.json"
+  },
+  {
+    "id": "lab-exploracao-360",
+    "manifest": "./exploracao-360/manifest.json"
+  }
+]

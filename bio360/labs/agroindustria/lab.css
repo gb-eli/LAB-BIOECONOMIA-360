@@ -1,0 +1,7 @@
+[data-module="lab-agroindustria"] .agro-instruction {
+  padding:10px 12px;
+  border-radius:12px;
+  background:var(--surface-2);
+  color:var(--muted);
+  margin-top:10px;
+}
