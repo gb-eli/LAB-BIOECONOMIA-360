@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "moduleId": "lab-producao-vegetal",
+  "scenarios": [
+    {
+      "id": "horta-escolar",
+      "title": "Horta escolar sustentável",
+      "level": "iniciante",
+      "objective": "Equilibrar produtividade, água e qualidade do solo em uma área pequena.",
+      "context": "Uma horta escolar precisa produzir bem sem desperdiçar água e sem deixar o solo exposto.",
+      "inputs": {
+        "irrigation": 55,
+        "density": 60,
+        "soilCover": 70,
+        "growth": 55,
+        "crop": "folhosa"
+      },
+      "goals": {
+        "productivity": {
+          "min": 72,
+          "label": "Produtividade"
+        },
+        "waterEfficiency": {
+          "min": 72,
+          "label": "Eficiência hídrica"
+        },
+        "soilHealth": {
+          "min": 68,
+          "label": "Saúde do solo"
+        }
+      },
+      "limits": {
+        "irrigation": {
+          "source": "input",
+          "max": 70,
+          "label": "Irrigação"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Que combinação de irrigação, densidade e cobertura do solo você escolheu e por quê?"
+        }
+      ],
+      "evidence": {
+        "required": [
+          "reflection",
+          "indicators"
+        ]
+      }
+    },
+    {
+      "id": "producao-comercial",
+      "title": "Produção comercial",
+      "level": "intermediario",
+      "objective": "Aumentar produção sem elevar demais o consumo de água e a pressão sobre o solo.",
+      "context": "Uma propriedade quer ampliar a produção para atender novos compradores.",
+      "inputs": {
+        "irrigation": 72,
+        "density": 80,
+        "soilCover": 45,
+        "growth": 72,
+        "crop": "milho"
+      },
+      "goals": {
+        "productivity": {
+          "min": 78,
+          "label": "Produtividade"
+        },
+        "waterEfficiency": {
+          "min": 62,
+          "label": "Eficiência hídrica"
+        },
+        "soilHealth": {
+          "min": 55,
+          "label": "Saúde do solo"
+        }
+      },
+      "limits": {
+        "density": {
+          "source": "input",
+          "max": 86,
+          "label": "Densidade"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Como você aumentou a produção sem comprometer excessivamente água e solo?"
+        }
+      ],
+      "evidence": {
+        "required": [
+          "reflection",
+          "indicators"
+        ]
+      }
+    },
+    {
+      "id": "periodo-seco",
+      "title": "Período seco",
+      "level": "desafio",
+      "objective": "Manter a cultura resiliente em uma condição de maior restrição hídrica.",
+      "context": "A disponibilidade de água caiu e o manejo precisa ser revisto.",
+      "inputs": {
+        "irrigation": 42,
+        "density": 48,
+        "soilCover": 88,
+        "growth": 48,
+        "crop": "frutifera"
+      },
+      "goals": {
+        "productivity": {
+          "min": 58,
+          "label": "Produtividade"
+        },
+        "waterEfficiency": {
+          "min": 82,
+          "label": "Eficiência hídrica"
+        },
+        "soilHealth": {
+          "min": 76,
+          "label": "Saúde do solo"
+        }
+      },
+      "limits": {
+        "irrigation": {
+          "source": "input",
+          "max": 55,
+          "label": "Irrigação"
+        }
+      },
+      "questions": [
+        {
+          "id": "q1",
+          "prompt": "Qual foi sua principal estratégia para enfrentar a restrição de água?"
+        }
+      ],
+      "evidence": {
+        "required": [
+          "reflection",
+          "indicators"
+        ]
+      }
+    }
+  ]
+}

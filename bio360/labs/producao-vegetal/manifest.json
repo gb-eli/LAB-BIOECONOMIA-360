@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-producao-vegetal",
+  "name": "Produção Vegetal 3D",
+  "version": "0.4.0",
+  "type": "lab",
+  "description": "Laboratório 3D de manejo vegetal com cenários JSON, irrigação, densidade, cobertura do solo e indicadores didáticos.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/producao-vegetal",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "curriculum",
+    "evidence",
+    "fallback-2d",
+    "g5-vegetation",
+    "ibl-local",
+    "lab-context",
+    "scenario-v2",
+    "scenarios",
+    "simulation"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "1",
+      "2"
+    ],
+    "units": [
+      "Técnicas de produção animal e vegetal",
+      "Sustentabilidade",
+      "Soluções sustentáveis"
+    ],
+    "knowledge": [
+      "Produção vegetal",
+      "Irrigação",
+      "Solo",
+      "Densidade de plantio",
+      "Produtividade",
+      "Uso eficiente de recursos"
+    ]
+  },
+  "experienceClass": "simulacao-3d"
+}

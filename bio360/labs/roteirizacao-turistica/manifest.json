@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "lab-roteirizacao-turistica",
+  "name": "Roteirização Turística 3D",
+  "version": "0.3.0",
+  "type": "lab",
+  "description": "Laboratório 3D para montar roteiros, ordenar paradas, controlar tempo, deslocamento, experiência e impacto.",
+  "entry": "./lab.js",
+  "style": "./lab.css",
+  "route": "/lab/roteirizacao-turistica",
+  "enabled": true,
+  "graphicMode": "adaptive",
+  "capabilities": [
+    "3d",
+    "curriculum",
+    "evidence",
+    "fallback-2d",
+    "g5-vegetation",
+    "ibl-local",
+    "lab-context",
+    "scenario-v2",
+    "scenarios",
+    "simulation"
+  ],
+  "fallback": {
+    "mode": "2d",
+    "entry": "./fallback-2d.js"
+  },
+  "curriculum": {
+    "series": [
+      "3"
+    ],
+    "units": [
+      "Roteirização turística",
+      "Gestão da atividade turística",
+      "Tecnologias sociais e identidade territorial",
+      "Sustentabilidade"
+    ],
+    "knowledge": [
+      "Roteiro turístico",
+      "Atrativos",
+      "Tempo de visita",
+      "Deslocamento",
+      "Experiência",
+      "Logística",
+      "Sustentabilidade"
+    ]
+  },
+  "experienceClass": "simulacao-3d"
+}
