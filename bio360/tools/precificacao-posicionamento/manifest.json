@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "tool-precificacao-posicionamento",
+  "name": "Precificação e Posicionamento",
+  "version": "0.1.0",
+  "type": "tool",
+  "description": "Ferramenta de preço, margem, ponto de equilíbrio e coerência entre custo, posicionamento e valor sustentável.",
+  "entry": "./tool.js",
+  "style": "./tool.css",
+  "route": "/tool/precificacao-posicionamento",
+  "enabled": true,
+  "capabilities": [
+    "calculator",
+    "lab-context",
+    "finance",
+    "curriculum"
+  ],
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Gestão e empreendedorismo",
+      "Marketing aplicado ao consumo sustentável"
+    ],
+    "knowledge": [
+      "Precificação",
+      "Margem de contribuição",
+      "Ponto de equilíbrio",
+      "Posicionamento",
+      "Valor percebido"
+    ]
+  }
+}

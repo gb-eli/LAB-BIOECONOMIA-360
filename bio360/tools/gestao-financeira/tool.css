@@ -1,0 +1,2 @@
+[data-module="tool-gestao-financeira"] .finance-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:16px;}
+@media(max-width:800px){[data-module="tool-gestao-financeira"] .finance-layout{grid-template-columns:1fr;}}

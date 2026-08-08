@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "tool-gestao-financeira",
+  "name": "Gestão Financeira",
+  "version": "0.2.0",
+  "type": "tool",
+  "description": "Ferramenta financeira integrada à Precificação e ao Projeto Integrador.",
+  "entry": "./tool.js",
+  "style": "./tool.css",
+  "route": "/tool/gestao-financeira",
+  "enabled": true,
+  "curriculum": {
+    "series": [
+      "1",
+      "2",
+      "3"
+    ],
+    "units": [
+      "Gestão e empreendedorismo"
+    ]
+  },
+  "capabilities": [
+    "lab-context"
+  ]
+}

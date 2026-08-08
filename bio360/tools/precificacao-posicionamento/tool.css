@@ -1,0 +1,14 @@
+[data-module="tool-precificacao-posicionamento"] .pricing-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);
+  gap:14px;
+}
+[data-module="tool-precificacao-posicionamento"] .pricing-result{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;
+}
+@media(max-width:760px){
+  [data-module="tool-precificacao-posicionamento"] .pricing-layout{grid-template-columns:1fr;}
+}
+@media(max-width:520px){
+  [data-module="tool-precificacao-posicionamento"] .pricing-result{grid-template-columns:1fr;}
+}
